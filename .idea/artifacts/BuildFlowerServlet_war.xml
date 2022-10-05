@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BuildFlowerServlet:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>BuildFlowerServlet</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="BuildFlowerServlet-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="BuildFlowerServlet:war exploded" />
+    </root>
+  </artifact>
+</component>
