@@ -62,7 +62,7 @@
                                 <a class="nav-link" href="gallery.html"> Gallery </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
+                                <a class="nav-link" href="${pageContext.request.contextPath}/contact">Contact us</a>
                             </li>
                         </ul>
                     </div>
@@ -446,12 +446,12 @@
                     </h5>
                     <ul>
                         <li class="active">
-                            <a href="index.html">
+                            <a href="${pageContext.request.contextPath}/home">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="about.html">
+                            <a href="${pageContext.request.contextPath}/about">
                                 About
                             </a>
                         </li>
@@ -461,7 +461,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="${pageContext.request.contextPath}/contact">
                                 Contact Us
                             </a>
                         </li>
