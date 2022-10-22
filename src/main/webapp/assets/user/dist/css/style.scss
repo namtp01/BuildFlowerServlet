@@ -105,7 +105,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-image: url(../images/hero.png);
+  background-image: url(../images/home3.png);
   background-size: cover;
   background-position: top right;
 }
@@ -137,6 +137,8 @@ body {
   padding: 10px 30px;
   color: #434242;
   text-align: center;
+  font-size: 23px;
+
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
@@ -212,6 +214,7 @@ a:focus {
 .quote_btn-container {
   display: flex;
   align-items: center;
+  font-size:23px;
 
   a {
     color: $black;
@@ -651,6 +654,7 @@ a:focus {
   background-color: #252525;
   color: $white;
 
+
   h5 {
     margin-bottom: 20px;
     font-weight: 700;
@@ -786,5 +790,17 @@ a:focus {
   }
 
 }
+.hero_area1 {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #ffeded;
+  background-size: cover;
+  background-position: top right;
+
+}
 
 // end footer section
+
+
