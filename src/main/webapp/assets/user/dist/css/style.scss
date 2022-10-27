@@ -1,5 +1,5 @@
 $btnColor: #023b48;
-$white: #ffffff;
+$white: #d22000;
 $primary1: #18d3ff;
 $primary2: #0dc3ff;
 $black:#050505;
@@ -105,7 +105,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-image: url(../images/hero.png);
+  background-image: url(../images/home3.png);
   background-size: cover;
   background-position: top right;
 }
@@ -137,6 +137,8 @@ body {
   padding: 10px 30px;
   color: #434242;
   text-align: center;
+  font-size: 23px;
+
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
@@ -212,6 +214,7 @@ a:focus {
 .quote_btn-container {
   display: flex;
   align-items: center;
+  font-size:23px;
 
   a {
     color: $black;
@@ -651,6 +654,7 @@ a:focus {
   background-color: #252525;
   color: $white;
 
+
   h5 {
     margin-bottom: 20px;
     font-weight: 700;
@@ -753,7 +757,7 @@ a:focus {
 /* footer section*/
 
 .footer_section {
-  background-color: #252525;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   position: relative;
@@ -784,7 +788,26 @@ a:focus {
   a {
     color: $white;
   }
+}
+.hero_area1 {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #ffeded;
+  background-size: cover;
+  background-position: top right;
 
 }
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 
 // end footer section
+
+
