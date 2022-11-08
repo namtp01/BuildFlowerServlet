@@ -2,22 +2,27 @@
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
 <mt:product_template title="Product">
     <jsp:attribute name="content">
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
                             <h4>Department</h4>
-<%--                            <ul>--%>
-<%--                                <li><a href="hoaboa.html">Hoa Bó</a></li>--%>
-<%--                                <li><a href="">Bình Hoa</a></li>--%>
-<%--                                <li><a href="">Giỏ Hoa</a></li>--%>
-
-<%--                                <li><a href="">Hộp Hoa</a></li>--%>
-<%--                                <li><a href="">Kệ Hoa Chúc Mừng</a></li>--%>
-<%--                                <li><a href="">Kệ Hoa Chia Buồn</a></li>--%>
-<%--                                <li><a href="">Hoa Cưới</a></li>--%>
-<%--                            </ul>--%>
+                            <ul>
+                                <li><a href="#">Fresh Meat</a></li>
+                                <li><a href="#">Vegetables</a></li>
+                                <li><a href="#">Fruit & Nut Gifts</a></li>
+                                <li><a href="#">Fresh Berries</a></li>
+                                <li><a href="#">Ocean Foods</a></li>
+                                <li><a href="#">Butter & Eggs</a></li>
+                                <li><a href="#">Fastfood</a></li>
+                                <li><a href="#">Fresh Onion</a></li>
+                                <li><a href="#">Papayaya & Crisps</a></li>
+                                <li><a href="#">Oatmeal</a></li>
+                            </ul>
                         </div>
                         <div class="sidebar__item">
                             <h4>Price</h4>
@@ -102,7 +107,6 @@
                                 </label>
                             </div>
                         </div>
-
                         <div class="sidebar__item">
                             <div class="latest-product__text">
                                 <h4>Latest Products</h4>
@@ -110,7 +114,7 @@
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa1.png" alt="">
+                                                <img src="img/latest-product/lp-1.jpg" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>Crab Pool Security</h6>
@@ -119,7 +123,7 @@
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa2.png" alt="">
+                                                <img src="img/latest-product/lp-2.jpg" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>Crab Pool Security</h6>
@@ -128,7 +132,7 @@
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa3.png" alt="">
+                                                <img src="img/latest-product/lp-3.jpg" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>Crab Pool Security</h6>
@@ -139,7 +143,7 @@
                                     <div class="latest-prdouct__slider__item">
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa4.png" alt="">
+                                                <img src="img/latest-product/lp-1.jpg" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>Crab Pool Security</h6>
@@ -148,7 +152,7 @@
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa5.png" alt="">
+                                                <img src="img/latest-product/lp-2.jpg" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>Crab Pool Security</h6>
@@ -157,7 +161,7 @@
                                         </a>
                                         <a href="#" class="latest-product__item">
                                             <div class="latest-product__item__pic">
-                                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa6.png" alt="">
+                                                <img src="img/latest-product/lp-3.jpg" alt="">
                                             </div>
                                             <div class="latest-product__item__text">
                                                 <h6>Crab Pool Security</h6>
@@ -179,340 +183,336 @@
                             <div class="product__discount__slider owl-carousel">
                                 <div class="col-lg-4">
                                     <div class="product__discount__item">
-                                        <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa7.png">
-                                        <div class="product__discount__percent">-20%</div>
-                                        <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__discount__item__text">
-                                        <span>Dried Fruit</span>
-                                        <h5><a href="#">Raisin’n’nuts</a></h5>
-                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="product__discount__item">
-                                    <div class="product__discount__item__pic set-bg">
-                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa8.png">
-                                        <div class="product__discount__percent">-20%</div>
-                                        <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__discount__item__text">
-                                        <span>Vegetables</span>
-                                        <h5><a href="#">Vegetables’package</a></h5>
-                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                        <div class="product__discount__item__pic set-bg"
+                                             data-setbg="img/product/discount/pd-1.jpg">
+                                            <div class="product__discount__percent">-20%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Dried Fruit</span>
+                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="product__discount__item">
-                                    <div class="product__discount__item__pic set-bg">
-                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa9.png">
-                                        <div class="product__discount__percent">-20%</div>
-                                        <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__discount__item__text">
-                                        <span>Dried Fruit</span>
-                                        <h5><a href="#">Mixed Fruitss</a></h5>
-                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="product__discount__item">
-                                    <div class="product__discount__item__pic set-bg">
-                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa10.png">
-                                        <div class="product__discount__percent">-20%</div>
-                                        <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__discount__item__text">
-                                        <span>Dried Fruit</span>
-                                        <h5><a href="#">Raisin’n’nuts</a></h5>
-                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg"
+                                             data-setbg="img/product/discount/pd-2.jpg">
+                                            <div class="product__discount__percent">-20%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Vegetables</span>
+                                            <h5><a href="#">Vegetables’package</a></h5>
+                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="product__discount__item">
-                                    <div class="product__discount__item__pic set-bg">
-                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa11.png">
-                                        <div class="product__discount__percent">-20%</div>
-                                        <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__discount__item__text">
-                                        <span>Dried Fruit</span>
-                                        <h5><a href="#">Raisin’n’nuts</a></h5>
-                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg"
+                                             data-setbg="img/product/discount/pd-3.jpg">
+                                            <div class="product__discount__percent">-20%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Dried Fruit</span>
+                                            <h5><a href="#">Mixed Fruitss</a></h5>
+                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="product__discount__item">
-                                    <div class="product__discount__item__pic set-bg">
-                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa12.png">
-                                        <div class="product__discount__percent">-20%</div>
-                                        <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                        </ul>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg"
+                                             data-setbg="img/product/discount/pd-4.jpg">
+                                            <div class="product__discount__percent">-20%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Dried Fruit</span>
+                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                        </div>
                                     </div>
-                                    <div class="product__discount__item__text">
-                                        <span>Dried Fruit</span>
-                                        <h5><a href="#">Raisin’n’nuts</a></h5>
-                                        <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg"
+                                             data-setbg="img/product/discount/pd-5.jpg">
+                                            <div class="product__discount__percent">-20%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Dried Fruit</span>
+                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="product__discount__item">
+                                        <div class="product__discount__item__pic set-bg"
+                                             data-setbg="img/product/discount/pd-6.jpg">
+                                            <div class="product__discount__percent">-20%</div>
+                                            <ul class="product__item__pic__hover">
+                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="product__discount__item__text">
+                                            <span>Dried Fruit</span>
+                                            <h5><a href="#">Raisin’n’nuts</a></h5>
+                                            <div class="product__item__price">$30.00 <span>$36.00</span></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="filter__item">
+                    <div class="filter__item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-5">
+                                <div class="filter__sort">
+                                    <span>Sort By</span>
+                                    <select>
+                                        <option value="0">Default</option>
+                                        <option value="0">Default</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="filter__found">
+                                    <h6><span>16</span> Products found</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-3">
+                                <div class="filter__option">
+                                    <span class="icon_grid-2x2"></span>
+                                    <span class="icon_ul"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
-                        <div class="col-lg-4 col-md-5">
-                            <div class="filter__sort">
-                                <span>Sort By</span>
-                                <select>
-                                    <option value="0">Default</option>
-                                    <option value="0">Default</option>
-                                </select>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa15.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="filter__found">
-                                <h6><span>16</span> Products found</h6>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa14.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-3">
-                            <div class="filter__option">
-                                <span class="icon_grid-2x2"></span>
-                                <span class="icon_ul"></span>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa13.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" >
-                                <img src="$pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa13.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa12.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" >
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa14.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa15.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa11.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa15.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" >
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa16.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa9.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa18.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa19.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa7.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa10.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" >
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa1.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa5.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <img src="$pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa5.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>11
-                                <h5>$30.00</h5>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa3.png">                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa6.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa2.png">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa1.png">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg">
+                                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa8.png">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">Crab Pool Security</a></h6>
+                                    <h5>$30.00</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg">
-                                <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa8.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Crab Pool Security</a></h6>
-                                <h5>$30.00</h5>
-                            </div>
-                        </div>
+                    <div class="product__pagination">
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
                     </div>
-                </div>
-                <div class="product__pagination">
-                    <b href="#">1</b>
-                    <b href="#">2</b>
-                    <b href="#">3</b>
-                    <b href="#"><i class="fa fa-long-arrow-right"></i></b>
-                </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Product Section End -->
     </jsp:attribute>
 </mt:product_template>
+
+
