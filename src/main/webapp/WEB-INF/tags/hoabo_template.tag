@@ -4,7 +4,6 @@
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Basic -->
     <meta charset="utf-8" />
@@ -17,95 +16,88 @@
     <meta name="author" content="" />
 
     <title>Flowers Shop</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/user/dist/css/bootstrap.css" />
-
     <!-- fonts style -->
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
+    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style1.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
+
+    <!-- responsive style -->
+    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.scss" rel="stylesheet" />
+
+    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.css.map.css" rel="stylesheet" />
+
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/responsive.css" rel="stylesheet" />
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/user/dist/css/style1.css" type="text/css">
 </head>
+<!-- bootstrap core css -->
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/user/dist/css/bootstrap.css" />
 
-<body class="sub_page">
-<div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-                <a class="navbar-brand" href="${pageContext.request.contextPath}/home">
-            <span>
-              Group02
-            </span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/home">Trang Chủ <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/about"> Giới Thiệu </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/product"> Sản Phẩm </a>
-                                <ul class="sub-menu">
-                                    <li><a href="${pageContext.request.contextPath}/hoabo">Hoa Bó</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/hoabinh">Bình Hoa</a></li>
-                                    <li><a href="giohoa.html">Giỏ Hoa</a></li>
-                                    <li><a href="hophoa.html">Hộp Hoa</a></li>
-                                    <li><a href="kehoachucmung.html">Kệ Hoa Chúc Mừng</a></li>
-                                    <li><a href="kehoachiabuon.html">Kệ Hoa Chia Buồn</a></li>
-                                    <li><a href="hoacuoi.html">Hoa Cưới</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/contact">Nghe Hoa Kể</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="${pageContext.request.contextPath}/contact">Liên Hệ</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="quote_btn-container ">
-                        <a href="${pageContext.request.contextPath}/admin/login">
-                            Log in
-                        </a>
-                        <a href="">
-                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/cart.png" alt="">
-                        </a>
-                        <form class="form-inline">
-                            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-                        </form>
-                    </div>
+<!-- Topbar Start -->
+<div class="container-fluid bg-primary py-3 d-none d-md-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white pr-3" href="">Login</a>
+                    <span class="text-white">|</span>
+                    <a class="text-white px-3" href="">Register</a>
                 </div>
-            </nav>
+            </div>
+            <div class="col-md-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+
+                    <a class="text-white px-3" href="">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <a class="text-white px-3" href="">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <a class="text-white px-3" href="">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+
+                </div>
+            </div>
         </div>
-    </header>
-    <!-- end header section -->
+    </div>
 </div>
 
+
+
+<!-- Navbar Start -->
+<div class="container-fluid position-relative nav-bar p-0">
+    <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+            <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>FLOWER</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0">
+                    <a class="nav-item nav-link active" href="${pageContext.request.contextPath}/home">Home<span class="sr-only">(current)</span></a>
+                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/about">About</a>
+                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/product">Product</a>
+                </div>
+                <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>FLOWERS</h1>
+                </a>
+                <div class="navbar-nav mr-auto py-0">
+                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/productdetail">ProductDetail</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
 
 
 <!-- Hero Section End -->
@@ -638,6 +630,7 @@
 
 <!-- end gallery section -->
 
+
 <!-- info section -->
 <section class="info_section layout_padding">
     <div class="container">
@@ -659,22 +652,22 @@
                     </h5>
                     <ul>
                         <li class="active">
-                            <a href="index.html">
+                            <a href="">
                                 Chính Sách vận chuyển
                             </a>
                         </li>
-                        <li>
-                            <a href="about.html">
+                        <li  class="active" >
+                            <a href="">
                                 Chính Sách bảo mật
                             </a>
                         </li>
-                        <li>
-                            <a href="gallery.html">
+                        <li  class="active">
+                            <a href="">
                                 Giới thiệu
                             </a>
-                        </li>
-                        <li>
-                            <a href="contact.html">
+                        </li >
+                        <li class="active">
+                            <a href="">
                                 Quy định và Chính Sách
                             </a>
                         </li>
@@ -686,15 +679,15 @@
                     <h5>
                         Facebook
                     </h5>
-                    <div class="insta_container">
-                        <a href="https://www.facebook.com/aboutflowers.vn/">
+                    <div class="active">
+                        <a href="">
                             Facebook
                         </a>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="info_contact">
+                <div class="info_insta">
                     <h5>
                         Liên Hệ
                     </h5>
@@ -732,17 +725,6 @@
     </p>
 </footer>
 <!-- footer section -->
-<!-- Footer Section End -->
-
-<!-- Js Plugins -->
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/jquery-3.3.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/jquery.nice-select.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/jquery-ui.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/jquery.slicknav.js"></script>
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/mixitup.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/owl.carousel.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/user/dist/js/main.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/assets/user/dist/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/assets/user/dist/js/bootstrap.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/assets/user/dist/js/custom.js"></script>
@@ -750,7 +732,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
 </script>
 <!-- End Google Map -->
-
-</body>
 
 </html>

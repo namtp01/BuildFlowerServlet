@@ -44,9 +44,9 @@
         <div class="row">
             <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-white pr-3" href="">Login</a>
+                    <a class="text-white pr-3"  href="${pageContext.request.contextPath}/login">Login</a>
                     <span class="text-white">|</span>
-                    <a class="text-white px-3" href="">Register</a>
+                    <a class="text-white px-3" href="${pageContext.request.contextPath}/register">Register</a>
                 </div>
             </div>
             <div class="col-md-6 text-center text-lg-right">
@@ -55,27 +55,23 @@
                     <a class="text-white px-3" href="">
                         <i class="fas fa-search"></i>
                     </a>
-                    <a class="text-white px-3" href="">
+                    <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
                         <i class="far fa-user"></i>
                     </a>
-                    <a class="text-white px-3" href="">
+                    <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
 <!-- Navbar Start -->
 <div class="container-fluid position-relative nav-bar p-0">
     <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
             <a href="index.html" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>FLOWER</h1>
+                <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Sunflower</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -87,7 +83,7 @@
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                 </div>
                 <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>FLOWERS</h1>
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>LOTUS</h1>
                 </a>
                 <div class="navbar-nav mr-auto py-0">
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/productdetail">ProductDetail</a>
@@ -125,58 +121,6 @@
 
 
 
-<section class="contact_section layout_padding">
-    <div class="section_number">
-        05
-    </div>
-    <div class="container ">
-        <div class="heading_container justify-content-center">
-            <h2 class="">
-                Liên Hệ
-            </h2>
-        </div>
-
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 mx-auto">
-                <form action="">
-                    <div>
-                        <input type="text" placeholder="Name" />
-                    </div>
-                    <div>
-                        <input type="email" placeholder="Email" />
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Pone Number" />
-                    </div>
-                    <div>
-                        <input type="text" class="message-box" placeholder="Message" />
-                    </div>
-                    <div class="d-flex  mt-4 ">
-                        <button>
-                            SEND
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- end contact section -->
-
-<!-- map section -->
-
-<div class="map_section">
-    <div class="map_container">
-        <div class="map">
-            <div id="googleMap"></div>
-        </div>
-    </div>
-</div>
-
-<!-- end map section -->
 
 <!-- info section -->
 <section class="info_section layout_padding">

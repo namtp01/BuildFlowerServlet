@@ -36,15 +36,16 @@
 <!-- bootstrap core css -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/user/dist/css/bootstrap.css" />
 
+
 <!-- Topbar Start -->
 <div class="container-fluid bg-primary py-3 d-none d-md-block">
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-white pr-3" href="">Login</a>
+                    <a class="text-white pr-3"  href="${pageContext.request.contextPath}/login">Login</a>
                     <span class="text-white">|</span>
-                    <a class="text-white px-3" href="">Register</a>
+                    <a class="text-white px-3" href="${pageContext.request.contextPath}/register">Register</a>
                 </div>
             </div>
             <div class="col-md-6 text-center text-lg-right">
@@ -53,27 +54,23 @@
                     <a class="text-white px-3" href="">
                         <i class="fas fa-search"></i>
                     </a>
-                    <a class="text-white px-3" href="">
+                    <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
                         <i class="far fa-user"></i>
                     </a>
-                    <a class="text-white px-3" href="">
+                    <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
 <!-- Navbar Start -->
 <div class="container-fluid position-relative nav-bar p-0">
     <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
             <a href="index.html" class="navbar-brand d-block d-lg-none">
-                <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>FLOWER</h1>
+                <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Sunflower</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -85,7 +82,7 @@
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                 </div>
                 <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>FLOWERS</h1>
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>LOTUS</h1>
                 </a>
                 <div class="navbar-nav mr-auto py-0">
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/productdetail">ProductDetail</a>
@@ -96,7 +93,19 @@
         </nav>
     </div>
 </div>
-
+<!-- Navbar End -->
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section set-bg" data-setbg="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa1.png">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>ADD TO CARD </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Navbar End -->
 </header>
 

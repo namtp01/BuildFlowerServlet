@@ -3,21 +3,17 @@
 <mt:contact_template title="Contact">
     <jsp:attribute name="content">
         <!-- Hero Section End -->
+  <section class="contact_section layout_padding">
+      <div class="container ">
+          <div class="heading_container justify-content-center">
+              <h2 class="">
+                  Add To Cart
+              </h2>
+          </div>
 
-<!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa1.png">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="breadcrumb__text">
-                    <h2>Shoping Cart</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<div class="card">
-    <div class="row">
+      </div>
+      <div class="card">
+      <div class="row">
         <div class="col-md-8 cart">
             <div class="row border-top border-bottom">
                 <div class="row main align-items-center">
@@ -81,8 +77,8 @@
         </div>
     </div>
 
-</div>
-
+   </div>
+  </section>
   <!-- end contact section -->
 
     </jsp:attribute>

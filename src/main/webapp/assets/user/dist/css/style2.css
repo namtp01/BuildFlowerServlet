@@ -1,0 +1,168 @@
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+}
+@media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+
+
+    html,
+    body {
+        height: 100%;
+        font-family: "Cairo", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        color: #000000;
+        font-weight: 400;
+        font-family: "Cairo", sans-serif;
+    }
+
+    h9 {
+        margin: 0;
+        color: #a91d03;
+        font-weight: 600;
+        font-family: "Cairo", sans-serif;
+    }
+
+    h7 {
+        margin: 0;
+        color: #000000;
+        font-weight: 400;
+        font-family: "Cairo", sans-serif;
+    }
+
+    h8 {
+        margin: 0;
+        color: #a91d03;
+        font-weight: 600;
+        font-size: 25px;
+        font-family: "Cairo", sans-serif;
+    }
+
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h9 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 18px;
+        font-family: "Cairo", sans-serif;
+        color: #000000;
+        font-weight: 400;
+        line-height: 26px;
+        margin: 0 0 15px 0;
+    }
+
+
+
+    img {
+        max-width: 100%;
+    }
+
+    input:focus,
+    select:focus,
+    button:focus,
+    textarea:focus {
+        outline: none;
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: none;
+        outline: none;
+        color: #ffffff;
+    }
+
+    ul,
+    ol {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.breadcrumb-section {
+    display: flex;
+    align-items: center;
+    padding: 45px 0 40px;
+    background-image: url(../images/flowers.png);
+}
+
+.breadcrumb__text h2 {
+    font-size: 46px;
+    color: #a91d03;
+    font-weight: 700;
+}
+
+.breadcrumb__option a {
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-right: 20px;
+    position: relative;
+}
+
+.breadcrumb__option a:after {
+    position: absolute;
+    right: -12px;
+    top: 13px;
+    height: 1px;
+    width: 10px;
+    background: #ffffff;
+    content: "";
+}
+
+.breadcrumb__option span {
+    display: inline-block;
+    font-size: 16px;
+    color: #000000;
+}
+

@@ -12,7 +12,6 @@
                                 <li><a href="${pageContext.request.contextPath}/hoabo">Hoa Bó</a></li>
                                 <li><a href="${pageContext.request.contextPath}/hoabinh">Bình Hoa</a></li>
                                 <li><a href="giohoa.html">Giỏ Hoa</a></li>
-
                                 <li><a href="hophoa.html">Hộp Hoa</a></li>
                                 <li><a href="kehoachucmung.html">Kệ Hoa Chúc Mừng</a></li>
                                 <li><a href="kehoachiabuon.html">Kệ Hoa Chia Buồn</a></li>

@@ -702,10 +702,12 @@ a:focus {
 .info_section h5 {
   margin-bottom: 20px;
   font-weight: 700;
+  font-size: 28px;
+  font-family: 'Baloo Chettan', cursive;
 }
 
 .info_section .info_logo h5 {
-  font-size: 38px;
+  font-size: 28px;
   font-family: 'Baloo Chettan', cursive;
 }
 

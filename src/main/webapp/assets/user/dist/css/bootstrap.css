@@ -153,18 +153,18 @@ sup {
 }
 
 a {
-  color: #ffffff;
+  color: #ee0000;
   text-decoration: none;
   background-color: transparent;
   padding: 10px;
 }
 a:hover {
-  color: #0056b3;
+  color: #000000;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #0056b3;
+  color: #ee0000;
   text-decoration: underline;
 }
 
@@ -2045,7 +2045,7 @@ textarea.form-control {
 }
 
 .form-check-input {
-  position: absolute;
+  position:relative;
   margin-top: 0.3rem;
   margin-left: -1.25rem;
 }
@@ -2447,8 +2447,8 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #E9A625;
+  border-color: #000000;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2712,14 +2712,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #ec9b4b;
+  border-color: #000000;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
@@ -2872,7 +2872,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-danger {
-  color: #dc3545;
+  color: #000000;
   border-color: #dc3545;
 }
 
@@ -3639,8 +3639,8 @@ input[type="button"].btn-block {
 
 .custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
-  border-color: #007bff;
-  background-color: #007bff;
+  border-color: #000000;
+  background-color: #a91d03;
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
@@ -4588,6 +4588,8 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .card > hr {
@@ -9947,7 +9949,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #ee0000 !important;
 }
 
 .text-black-50 {

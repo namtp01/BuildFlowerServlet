@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:product_template title="ProductDetail">
+<mt:productdeail_template title="ProductDetail">
     <jsp:attribute name="content">
     <!-- Shop Detail Start -->
     <div class="container-fluid py-5">
@@ -222,4 +222,4 @@
     <!-- Shop Detail End -->
 
     </jsp:attribute>
-</mt:product_template>
+</mt:productdeail_template>

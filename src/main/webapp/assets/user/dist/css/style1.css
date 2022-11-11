@@ -1279,7 +1279,6 @@ ol {
 .product {
 	padding-top: 80px;
 	padding-bottom: 80px;
-	padding-right: 200px;
 }
 
 .product__discount {
@@ -1650,12 +1649,11 @@ ol {
 
 .product__pagination a,
 .blog__pagination a {
-	display: inline-block;
 	width: 30px;
 	height: 30px;
 	border: 1px solid #b2b2b2;
 	font-size: 14px;
-	color: #ffffff;
+	color: #7c0000;
 	font-weight: 700;
 	line-height: 28px;
 	text-align: center;
@@ -3415,45 +3413,67 @@ h2,
 	.hero__search__form form .hero__search__categories {
 		display: none;
 	}
+
 	.featured__controls ul li {
 		margin-bottom: 10px;
 	}
+
 	.product__details__text ul li b {
 		width: 100px;
 	}
+
 	.product__details__tab .nav-tabs li {
 		margin-right: 20px;
 	}
+
 	.shoping__cart__btns {
 		text-align: center;
 	}
+
 	.primary-btn.cart-btn.cart-btn-right {
 		float: none;
 		margin-top: 10px;
 	}
+
 	.shoping__checkout .primary-btn {
 		display: block;
 		text-align: center;
 		padding: 10px 15px 10px;
 	}
+
 	.map .map-inside {
 		-webkit-transform: translateX(-125px);
 		-ms-transform: translateX(-125px);
 		transform: translateX(-125px);
 	}
+
 	.map .map-inside .inside-widget {
 		width: 250px;
 	}
+
 	.product__details__tab .nav-tabs li {
 		margin-right: 15px;
 	}
+
 	.shoping__discount form input {
 		width: 100%;
 	}
+
 	.checkout__order {
 		padding: 20px;
 	}
+
 	.blog__details__hero__text h2 {
 		font-size: 24px;
+	}
+
+	h {
+		font-size: 18px;
+		font-family: "Cairo", sans-serif;
+		color: #000000;
+		font-weight: 400;
+		line-height: 26px;
+		margin: 0 0 15px 0;
+
 	}
 }

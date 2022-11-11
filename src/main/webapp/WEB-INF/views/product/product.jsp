@@ -321,10 +321,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa15.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -336,10 +336,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa14.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -351,10 +351,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa13.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -366,10 +366,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa12.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -381,10 +381,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa11.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -396,10 +396,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa9.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -411,10 +411,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa7.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -426,10 +426,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa5.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
@@ -441,10 +441,10 @@
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
                                     <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa3.png">                                    <ul class="product__item__pic__hover">
-                                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                    </ul>
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                </ul>
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a href="#">Crab Pool Security</a></h6>
