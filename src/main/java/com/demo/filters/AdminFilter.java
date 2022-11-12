@@ -20,7 +20,7 @@
 //        HttpServletRequest httpServletRequest = (HttpServletRequest) request;
 //        HttpSession session = httpServletRequest.getSession();
 //        if (session.getAttribute("username_admin") == null && !((HttpServletRequest) request).getRequestURI().endsWith("admin/login")) {
-//            request.getRequestDispatcher("/WEB-INF/views/admin/login/index.jsp").forward(request,response);
+//            request.getRequestDispatcher("/WEB-INF/views/admin/login/dashboard.jsp").forward(request,response);
 //        }else {
 //            chain.doFilter(request, response);
 //        }
