@@ -58,10 +58,10 @@
                                 <a class="nav-link" href="${pageContext.request.contextPath}/about"> About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="gallery.html"> Gallery </a>
+                                <a class="nav-link" href="${pageContext.request.contextPath}/product"> Gallery </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
+                                <a class="nav-link" href="${pageContext.request.contextPath}/contact">Contact us</a>
                             </li>
                         </ul>
 
@@ -137,22 +137,22 @@
                     </h5>
                     <ul>
                         <li>
-                            <a href="index.html">
+                            <a href="${pageContext.request.contextPath}/home">
                                 Home
                             </a>
                         </li>
                         <li class="active">
-                            <a href="about.html">
+                            <a href="${pageContext.request.contextPath}/about">
                                 About
                             </a>
                         </li>
                         <li>
-                            <a href="gallery.html">
+                            <a href="${pageContext.request.contextPath}/product">
                                 Gallery
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html">
+                            <a href="${pageContext.request.contextPath}/contact">
                                 Contact Us
                             </a>
                         </li>

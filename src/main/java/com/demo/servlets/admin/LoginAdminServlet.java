@@ -14,6 +14,6 @@ public class LoginAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/admin/login/index.jsp").forward(request,response);
+        request.getRequestDispatcher("../WEB-INF/views/admin/login/login.jsp").forward(request,response);
     }
 }
