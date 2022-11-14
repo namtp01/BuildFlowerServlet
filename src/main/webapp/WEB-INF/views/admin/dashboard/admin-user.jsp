@@ -12,7 +12,7 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>DataTables</h1>
+                                <h1>User list</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
@@ -31,17 +31,20 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                                <form action="${pageContext.request.contextPath}/admin/general">
+                                    <input type="submit" class="btn btn-primary float-right" value="Add user"/>
+                                </form>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example2" class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <th>Rendering engine</th>
-                                        <th>Browser</th>
-                                        <th>Platform(s)</th>
-                                        <th>Engine version</th>
-                                        <th>CSS grade</th>
+                                        <th>Name</th>
+                                        <th>username</th>
+                                        <th>Password</th>
+                                        <th>Gender</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
