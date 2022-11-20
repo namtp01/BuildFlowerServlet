@@ -55,7 +55,14 @@
                                         </td>
                                         <td>Win 95+</td>
                                         <td> 4</td>
-                                        <td>X</td>
+                                        <td>
+                                            <form action="${pageContext.request.contextPath}/admin/general">
+                                                <input type="submit" class="btn btn-primary float-left" value="Edit user"/>
+                                            </form>
+                                            <form action="${pageContext.request.contextPath}/admin/general">
+                                                <input type="submit" class="btn btn-primary float-right" value="Delete user"/>
+                                            </form>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Trident</td>
