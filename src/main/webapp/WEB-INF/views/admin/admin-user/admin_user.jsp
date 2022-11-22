@@ -63,10 +63,10 @@
                                         <td>Admin</td>
                                         <td>
                                             <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-primary float-left" value="Edit user"/>
+                                                <input type="submit" class="btn btn-primary float-left" value="Edit"/>
                                             </form>
                                             <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-primary float-right" value="Delete user"/>
+                                                <input type="submit" class="btn btn-primary float-right" value="Delete"/>
                                             </form>
                                         </td>
                                     </tr>
@@ -91,15 +91,6 @@
                                         <td>Admin</td>
                                     </tr>
                                     </tbody>
-                                    <tfoot>
-                                    <tr>
-                                        <th>Rendering engine</th>
-                                        <th>Browser</th>
-                                        <th>Platform(s)</th>
-                                        <th>Engine version</th>
-                                        <th>CSS grade</th>
-                                    </tr>
-                                    </tfoot>
                                 </table>
                             </div>
                             <!-- /.card-body -->
