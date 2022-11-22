@@ -14,6 +14,6 @@ public class AdminUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/admin/dashboard/admin-user.jsp").forward(request,response);
+        request.getRequestDispatcher("../WEB-INF/views/admin/dashboard/admin-user").forward(request,response);
     }
 }

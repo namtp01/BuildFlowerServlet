@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:admin_template title="admin-user">
+<mt:admin_template title="admin-product">
     <jsp:attribute name="content">
         <!-- Navbar -->
         <body class="hold-transition sidebar-mini">
@@ -12,15 +12,15 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>User list</h1>
+                                <h1>Product list</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item active">User</li>
+                                    <li class="breadcrumb-item active">Product</li>
                                 </ol>
                             </div>
                         </div>
-                    </div><!-- /.container-fluid -->
+                    </div>
                 </section>
 
                 <!-- Main content -->
@@ -37,13 +37,17 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example2" class="table table-bordered table-hover">
+                                <table id="product-table" class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <th>Name</th>
-                                        <th>username</th>
+                                        <th>Username</th>
                                         <th>Password</th>
-                                        <th>Gender</th>
+                                        <th>Full name</th>
+                                        <th>Address</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th>Role</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
