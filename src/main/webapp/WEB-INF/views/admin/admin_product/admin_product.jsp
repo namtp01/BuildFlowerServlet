@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">DataTable with minimal features & hover style</h3>
-                                <form action="${pageContext.request.contextPath}/admin/general">
+                                <form action="${pageContext.request.contextPath}/admin/add_product">
                                     <input type="submit" class="btn btn-primary float-right" value="Add user"/>
                                 </form>
                             </div>
