@@ -223,16 +223,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>
-                    Tại sao chọn chúng tôi
-                </h2>
+                <h9>
+                    Why we choose us
+                </h9>
                 <p>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                    Hampden-Sydney College in Virginia, looked up one of the more obscure Latin wordsContrary to popular belief,
-                    Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
-                    making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                    looked up one of the more obscure Latin words
+                    Lotus flower shop has long become a flower shop visited by many people in Ho Chi Minh City. Coming to the store, you will admire a variety of different fresh flowers, eye-catching and beautiful colors.
+                </p>
+                <p>
+                    The flowers here are always updated every day to ensure freshness in order to best serve customers. Lotus flower shop will provide a number of flower samples such as: love flowers, birthday flowers, opening flowers and some other flower patterns.
                 </p>
                 <div>
                     <a href="">

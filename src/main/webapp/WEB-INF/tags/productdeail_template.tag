@@ -24,9 +24,10 @@
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style1.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
+    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style1.css" rel="stylesheet" />
+
 
     <!-- responsive style -->
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.scss" rel="stylesheet" />

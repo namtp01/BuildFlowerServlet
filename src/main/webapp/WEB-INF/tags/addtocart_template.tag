@@ -27,6 +27,8 @@
     <!-- Custom styles for this template -->
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
+    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style1.css" rel="stylesheet" />
+
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.scss" rel="stylesheet" />
 
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.css.map.css" rel="stylesheet" />
