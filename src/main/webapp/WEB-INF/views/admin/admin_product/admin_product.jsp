@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:admin_template title="admin-user">
+<mt:admin_template title="admin-product">
     <jsp:attribute name="content">
         <!-- Navbar -->
         <body class="hold-transition sidebar-mini">
@@ -12,11 +12,11 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>User list</h1>
+                                <h1>Product list</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
-                                    <li class="breadcrumb-item active">User</li>
+                                    <li class="breadcrumb-item active">Product</li>
                                 </ol>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">DataTable with minimal features & hover style</h3>
-                                <form action="${pageContext.request.contextPath}/admin/general">
+                                <form action="${pageContext.request.contextPath}/admin/add_product">
                                     <input type="submit" class="btn btn-primary float-right" value="Add user"/>
                                 </form>
                             </div>
@@ -51,60 +51,39 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="user-table" class="table table-bordered table-hover">
+                                <table id="product-table" class="table table-bordered table-hover">
                                     <thead>
                                     <tr>
-                                        <th>Username</th>
-                                        <th>Password</th>
-                                        <th>Full name</th>
-                                        <th>Address</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Name</th>
+                                        <th>Quanity</th>
+                                        <th>Description</th>
+                                        <th>Details</th>
                                         <th>Status</th>
-                                        <th>Role</th>
+                                        <th>Featured</th>
+                                        <th>Size</th>
+                                        <th>Category</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>ThuThao12</td>
-                                        <td>Password</td>
-                                        <td>Thai Thi Thu Thao</td>
-                                        <td>Hell</td>
-                                        <td>19110515@student.hcmute.edu.vn</td>
-                                        <td>0000000001</td>
-                                        <td>Active</td>
-                                        <td>Admin</td>
+                                        <td>Hoa Hong</td>
+                                        <td>20</td>
+                                        <td>Hoa Hong Do</td>
+                                        <td>...</td>
+                                        <td>Available</td>
+                                        <td>...</td>
+                                        <td>Medium</td>
+                                        <td>...</td>
                                         <td>
                                             <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-primary float-left" value="Edit"/>
+                                                <input type="submit" class="btn btn-primary float-left" value="Edit user"/>
                                             </form>
                                             <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-primary float-right" value="Delete"/>
+                                                <input type="submit" class="btn btn-primary float-right" value="Delete user"/>
                                             </form>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>LuanPOP12</td>
-                                        <td>Pass/Pass</td>
-                                        <td>Bui Huu Luan</td>
-                                        <td>Highway</td>
-                                        <td>19110088@student.hcmute.edu.vn</td>
-                                        <td>0000000014</td>
-                                        <td>Active</td>
-                                        <td>Admin</td>
-                                    </tr>
-                                    <tr>
-                                        <td>HuongNhay</td>
-                                        <td>LazyTown</td>
-                                        <td>Vo Thi Huynh Huong</td>
-                                        <td>Tam Cam</td>
-                                        <td>191100084@student.hcmute.edu.vn</td>
-                                        <td>0000000004</td>
-                                        <td>Active</td>
-                                        <td>Admin</td>
-                                    </tr>
-                                    </tbody>
                                 </table>
                             </div>
                             <!-- /.card-body -->

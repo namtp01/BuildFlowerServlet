@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:admin_template title="general">
+<mt:admin_template title="add_user">
     <jsp:attribute name="content">
         <body class="hold-transition sidebar-mini">
         <div class="wrapper">
@@ -11,12 +11,12 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>General Form</h1>
+                                <h1>Add User</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">General Form</li>
+                                    <li class="breadcrumb-item active">Add User</li>
                                 </ol>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="inputUsername">Username</label>
-                                                <input type="email" class="form-control" id="inputUsername" placeholder="Enter email">
+                                                <input type="text" class="form-control" id="inputUsername" placeholder="Enter email">
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPassword1">Password</label>
@@ -51,20 +51,31 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputFullName">Full Name</label>
-                                                <input type="password" class="form-control" id="inputFullName" placeholder="Password">
+                                                <input type="text" class="form-control" id="inputFullName" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputAddress">Address</label>
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="Password">
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputEmail">Email</label>
-                                                <input type="password" class="form-control" id="inputEmail" placeholder="Password">
+                                                <input type="email" class="form-control" id="inputEmail" placeholder="Password">
                                             </div>
-                                            <div class="row">
-                                                <div class="form-check col-sm-6">
-                                                    <input type="radio" class="form-check-input" id="checkMale1">
-                                                    <label class="form-check-label" for="checkMale1">Male</label>
-                                                </div>
-                                                <div class="form-check col-sm-6">
-                                                    <input type="radio" class="form-check-input" id="checkFemale1">
-                                                    <label class="form-check-label" for="checkFemale1">Female</label>
+                                            <div class="form-group">
+                                                <label for="inputPhone">Phone Number</label>
+                                                <input type="number" class="form-control" id="inputPhone" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="checkRole">Role</label>
+                                                <div class="row" id="checkRole">
+                                                    <div class="form-check col-sm-6">
+                                                        <input type="radio" class="form-check-input" id="checkAdmin" checked="checked" name="role">
+                                                        <label class="form-check-label" for="checkAdmin">Admin</label>
+                                                    </div>
+                                                    <div class="form-check col-sm-6">
+                                                        <input type="radio" class="form-check-input" id="checkUser" name="role">
+                                                        <label class="form-check-label" for="checkUser">User</label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

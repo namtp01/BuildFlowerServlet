@@ -12,16 +12,17 @@
                         <div class="sidebar__item">
                             <h4>Department</h4>
                             <ul>
-                                <li><a href="#">Fresh Meat</a></li>
-                                <li><a href="#">Vegetables</a></li>
-                                <li><a href="#">Fruit & Nut Gifts</a></li>
-                                <li><a href="#">Fresh Berries</a></li>
-                                <li><a href="#">Ocean Foods</a></li>
-                                <li><a href="#">Butter & Eggs</a></li>
-                                <li><a href="#">Fastfood</a></li>
-                                <li><a href="#">Fresh Onion</a></li>
-                                <li><a href="#">Papayaya & Crisps</a></li>
-                                <li><a href="#">Oatmeal</a></li>
+                                <li><a href="#">Hoa Chúc Mừng</a></li>
+                                <li><a href="#">Hoa Cưới</a></li>
+                                <li><a href="#">Hoa Sinh Nhật </a></li>
+                                <li><a href="#">Hoa Chia Buồn</a></li>
+                                <li><a href="#">Hoa Khai Trương</a></li>
+                                <li><a href="#">Bó Hoa</a></li>
+                                <li><a href="#">Giỏ Hoa</a></li>
+                                <li><a href="#">Hoa Bình</a></li>
+                                <li><a href="#">Kệ Hoa</a></li>
+                                <li><a href="#">Hoa Hộp</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
                             </ul>
                         </div>
                         <div class="sidebar__item">
@@ -292,30 +293,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="filter__item">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-5">
-                                <div class="filter__sort">
-                                    <span>Sort By</span>
-                                    <select>
-                                        <option value="0">Default</option>
-                                        <option value="0">Default</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
-                                <div class="filter__found">
-                                    <h6><span>16</span> Products found</h6>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-3">
-                                <div class="filter__option">
-                                    <span class="icon_grid-2x2"></span>
-                                    <span class="icon_ul"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="product__item">
