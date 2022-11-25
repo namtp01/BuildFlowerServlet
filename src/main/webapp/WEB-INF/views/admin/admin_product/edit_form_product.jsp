@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:admin_template title="add_user">
+<mt:admin_template title="edit_product">
     <jsp:attribute name="content">
         <body class="hold-transition sidebar-mini">
         <div class="wrapper">
@@ -11,12 +11,12 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Add User</h1>
+                                <h1>Edit Product</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Add User</li>
+                                    <li class="breadcrumb-item active">Edit Product</li>
                                 </ol>
                             </div>
                         </div>
@@ -31,39 +31,39 @@
                                 <!-- general form elements -->
                                 <div class="card card-primary">
                                     <div class="card-header">
-                                        <h3 class="card-title">Add User form</h3>
+                                        <h3 class="card-title">Edit Product form</h3>
                                     </div>
                                     <!-- /.card-header -->
                                     <!-- form start -->
                                     <form>
                                         <div class="card-body">
                                             <div class="form-group">
-                                                <label for="inputUsername">Username</label>
-                                                <input type="text" class="form-control" id="inputUsername" placeholder="Enter email">
+                                                <label for="inputName">Name</label>
+                                                <input type="text" class="form-control" id="inputName" placeholder="Enter email">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+                                                <label for="inputQuanity">Quanity</label>
+                                                <input type="number" class="form-control" id="inputQuanity" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword2">Re-enter Password</label>
-                                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                                                <label for="inputDescription">Description</label>
+                                                <input type="text" class="form-control" id="inputDescription" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputFullName">Full Name</label>
-                                                <input type="text" class="form-control" id="inputFullName" placeholder="Password">
+                                                <label for="inputDetail">Detail</label>
+                                                <input type="text" class="form-control" id="inputDetail" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputAddress">Address</label>
-                                                <input type="text" class="form-control" id="inputAddress" placeholder="Password">
+                                                <label for="inputFeatured">Featured</label>
+                                                <input type="text" class="form-control" id="inputFeatured" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputEmail">Email</label>
-                                                <input type="email" class="form-control" id="inputEmail" placeholder="Password">
+                                                <label for="inputSize">Size</label>
+                                                <input type="text" class="form-control" id="inputSize" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPhone">Phone Number</label>
-                                                <input type="number" class="form-control" id="inputPhone" placeholder="Password">
+                                                <label for="inputCategory">Category</label>
+                                                <input type="password" class="form-control" id="inputCategory" placeholder="Password">
                                             </div>
                                             <div class="form-group">
                                                 <label for="checkRole">Role</label>
