@@ -1,12 +1,12 @@
-package com.demo.servlets.user;
+package com.demo.servlets.product;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "HomeServlet", value = "/home")
-public class HomeServlet extends HttpServlet {
+@WebServlet(name = "ProductServlet", value = "/product")
+public class ProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request,response);
@@ -14,6 +14,6 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/views/home/home.jsp").forward(request,response);
+        request.getRequestDispatcher("WEB-INF/views/product/product.jsp").forward(request,response);
     }
 }
