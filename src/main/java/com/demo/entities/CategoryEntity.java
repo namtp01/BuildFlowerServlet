@@ -1,23 +1,40 @@
 package com.demo.entities;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 
 @Entity
-@Table(name = "category", schema = "heroku_8f21e8f014371d8", catalog = "")
-public class CategoryEntity {
+@Table(name = "category", schema = "heroku_8f21e8f014371d8")
+public class CategoryEntity implements java.io.Serializable{
+    private List<CategoryEntity> categories = new ArrayList<CategoryEntity>(0);
+    private List<ProductEntity> products = new ArrayList<ProductEntity>(0);
+    private CategoryEntity category;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id", nullable = false)
     private int id;
-    @Basic
+
     @Column(name = "name", nullable = false, length = 250)
     private String name;
-    @Basic
+
     @Column(name = "status", nullable = false)
-    private byte status;
-    @Basic
-    @Column(name = "parent_id", nullable = false)
-    private int parentId;
+    private boolean status;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "parent_id")
+    public CategoryEntity getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryEntity category) {
+        this.category = category;
+    }
+
 
     public int getId() {
         return id;
@@ -35,19 +52,30 @@ public class CategoryEntity {
         this.name = name;
     }
 
-    public byte getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    public int getParentId() {
-        return parentId;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+    public List<CategoryEntity> getCategories() {
+        return this.categories;
     }
 
-    public void setParentId(int parentId) {
-        this.parentId = parentId;
+    public void setCategories (List<CategoryEntity> categories) {
+        this.categories = categories;
+    }
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "id")
+    public List<ProductEntity> getProducts() {
+        return this.products;
+    }
+
+    public void setProducts (List<ProductEntity> products) {
+        this.products = products;
     }
 }

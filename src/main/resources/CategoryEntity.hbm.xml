@@ -14,5 +14,8 @@
         <property name="status">
             <column name="status" sql-type="tinyint(1)"/>
         </property>
+        <property name="category">
+            <column name="parent_id" sql-type="int(11)"/>
+        </property>
     </class>
 </hibernate-mapping>

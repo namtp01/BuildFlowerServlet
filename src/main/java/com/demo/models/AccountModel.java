@@ -11,14 +11,13 @@ public class AccountModel extends AbstractModel<AccountEntity>{
         super(AccountEntity.class);
     }
 
-    public AccountEntity find(String username, int role) {
+    public AccountEntity find(String username) {
         AccountEntity accountEntity = null;
         Session session = sessionFactory.openSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            accountEntity = (AccountEntity) session.createQuery("from AccountEntity where username = :username and roleId = :role")
-                    .setParameter("role", role)
+            accountEntity = (AccountEntity) session.createQuery("from AccountEntity where username = :username")
                     .setParameter("username", username).getSingleResult();
             transaction.commit();
         } catch (Exception e) {
@@ -32,8 +31,29 @@ public class AccountModel extends AbstractModel<AccountEntity>{
         return accountEntity;
     }
 
-    public AccountEntity login(String username, String password, int role) {
-        AccountEntity accountEntity = find(username, role);
+    public AccountEntity find(String username, int role) {
+        AccountEntity accountEntity = null;
+        Session session = sessionFactory.openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            accountEntity = (AccountEntity) session.createQuery("from AccountEntity where username = :username and roleId = :role_id")
+                    .setParameter("role_id", role)
+                    .setParameter("username", username).getSingleResult();
+            transaction.commit();
+        } catch (Exception e) {
+            accountEntity = null;
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        } finally {
+            session.close();
+        }
+        return accountEntity;
+    }
+
+    public AccountEntity login(String username, String password, int roleId) {
+        AccountEntity accountEntity = find(username, roleId);
         if(accountEntity != null) {
             if (BCrypt.checkpw(password, accountEntity.getPassword())) {
                 return accountEntity;

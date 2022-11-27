@@ -1,10 +1,21 @@
 package com.demo.entities;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "product", schema = "heroku_8f21e8f014371d8", catalog = "")
-public class ProductEntity {
+@Table(name = "product", schema = "heroku_8f21e8f014371d8")
+public class ProductEntity implements java.io.Serializable {
+
+    @OneToOne
+    @JoinColumn(name = "category_id")
+    private CategoryEntity category;
+
+    @Transient
+    private ProductEntity product;
+
+    private List<ProductEntity> products = new ArrayList<ProductEntity>(0);
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id", nullable = false)
@@ -26,13 +37,33 @@ public class ProductEntity {
     private String details;
     @Basic
     @Column(name = "status", nullable = false)
-    private byte status;
+    private boolean status;
     @Basic
     @Column(name = "featured", nullable = false)
-    private byte featured;
+    private boolean featured;
     @Basic
     @Column(name = "category_id", nullable = false)
     private int categoryId;
+
+    public CategoryEntity getCategory() {
+        return this.category;
+    }
+
+    public void setCategory(CategoryEntity category) {this.category = category;}
+
+    public ProductEntity getProduct() {
+        return this.product;
+    }
+
+    public void setProduct(ProductEntity product) {this.product = product;}
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
+    public List<ProductEntity> getProducts() {
+        return this.products;
+    }
+
+    public void setProducts (List<ProductEntity> products) {
+        this.products = products;
+    }
 
     public int getId() {
         return id;
@@ -82,19 +113,19 @@ public class ProductEntity {
         this.details = details;
     }
 
-    public byte getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(byte status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    public byte getFeatured() {
+    public boolean getFeatured() {
         return featured;
     }
 
-    public void setFeatured(byte featured) {
+    public void setFeatured(boolean featured) {
         this.featured = featured;
     }
 
@@ -105,4 +136,5 @@ public class ProductEntity {
     public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
+
 }
