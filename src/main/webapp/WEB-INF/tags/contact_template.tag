@@ -88,7 +88,7 @@
                 </a>
                 <div class="navbar-nav mr-auto py-0">
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/productdetail">ProductDetail</a>
-                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/Service" >Service</a>
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/contact">Contact</a>
                 </div>
             </div>
@@ -107,7 +107,6 @@
 
 
 
-
 <!-- info section -->
 <section class="info_section layout_padding">
     <div class="container">
@@ -115,39 +114,35 @@
             <div class="col-md-3">
                 <div class="info_logo">
                     <h5>
-                        Tiệm Hoa
+                        Flower Shop
                     </h5>
                     <p>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                        Ho Chi Minh City fresh flower shop Qflower is proud to be the convergence of countless flowers that are meticulously selected and made by the delicate and professional hands of experienced artisans. Help you send a gift of fresh flowers, bring messages and meaningful wishes to the recipient.
                     </p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="info_links pl-lg-5">
                     <h5>
-                        Chính Sách
+                        Policy
                     </h5>
                     <ul>
                         <li class="active">
-                            <a href="">
-                                Chính Sách vận chuyển
+                            <a href="${pageContext.request.contextPath}/ShippingPolicy">
+                                Shipping Policy
                             </a>
                         </li>
                         <li  class="active" >
-                            <a href="">
-                                Chính Sách bảo mật
+                            <a href="${pageContext.request.contextPath}/PrivacyPolicy">
+                                Privacy Policy
                             </a>
                         </li>
                         <li  class="active">
-                            <a href="">
-                                Giới thiệu
+                            <a href="${pageContext.request.contextPath}/Introduce">
+                                Introduce
                             </a>
                         </li >
-                        <li class="active">
-                            <a href="">
-                                Quy định và Chính Sách
-                            </a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -157,16 +152,16 @@
                         Facebook
                     </h5>
                     <div class="active">
-                        <a href="">
+                        <p href="">
                             Facebook
-                        </a>
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="info_insta">
                     <h5>
-                        Liên Hệ
+                        Contact
                     </h5>
                     <div>
                         <img src="${pageContext.request.contextPath}/assets/user/dist/images/location-white.png" alt="">
@@ -193,6 +188,7 @@
 </section>
 
 <!-- end info_section -->
+
 
 <!-- footer section -->
 <footer class="container-fluid footer_section">
