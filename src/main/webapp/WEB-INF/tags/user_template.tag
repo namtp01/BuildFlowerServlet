@@ -303,7 +303,7 @@
     <div class="container">
         <div class="heading_container justify-content-center">
             <h2>
-                Khách hàng của chúng tôi nói gì
+                What our customers say
             </h2>
             <div class="section_number">
                 04
@@ -360,7 +360,7 @@
     <div class="container ">
         <div class="heading_container justify-content-center">
             <h2 class="">
-                Liên Hệ
+                Contact
             </h2>
         </div>
 
