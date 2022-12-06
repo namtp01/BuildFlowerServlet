@@ -11,16 +11,15 @@
               <div class="col-md-8">
                   <div class="fruit_detail-box">
                       <h8>
-                          HOA HỒNG ECUADOR
+                          ECUADOR ROSES
                       </h8>
                       <div>
                              <h class="mt-4 mb-5">
-                                     Hoa hồng Ecuador được ví như nàng thơ dịu dàng, quyến rũ trước một rừng hoa bạt ngàn màu sắc. Vẻ đẹp của hồng Ecuador thật khó để diễn tả bằng lời, và người tặng nó cũng mang nhiều nỗi tâm tư tình cảm giấu kín.
-                             </h>
+                                 The Ecuadorian rose is likened to a gentle, seductive muse in front of a forest of flowers. The beauty of the Ecuadorian rose is difficult to describe in words, and the person who gave it also carries many hidden emotions.                             </h>
                       </div>
                       <div>
                           <h href="" class="custom_dark-btn">
-                              Đọc thêm
+                              Read more
                           </h>
                       </div>
                   </div>
@@ -35,17 +34,15 @@
               <div class="col-md-8">
                   <div class="fruit_detail-box">
                       <h8>
-                          HOA TULIP – BIỂU TƯỢNG CỦA TÌNH YÊU VĨNH CỬU
-                      </h8>
+                          TULIP FLOWERS – SYMPTOMS OF ETERNAL LOVE                      </h8>
                       <div>
                           <h class="mt-4 mb-5">
-                              Là một trong những loài hoa dễ nhận biết nhất thế giới, hoa tulip đơn giản nhưng xinh đẹp có thể được tìm thấy ở bất cứ nơi đâu. Với những bông hoa không quá to, quá nhỏ hay quá rực rỡ và những ý nghĩa phong phú thì nó hoàn hảo cho bất kì dịp nào
-                          </h>
+                              As one of the world's most recognizable flowers, the simple yet beautiful tulip can be found just about anywhere. With flowers that aren't too big, too small or too vibrant and rich in meanings, it's perfect for any occasion.                          </h>
                       </div>
 
                       <div>
                           <h href="" class="custom_dark-btn">
-                              Đọc thêm
+                              Read more
                           </h>
                       </div>
                   </div>
@@ -60,17 +57,16 @@
               <div class="col-md-8">
                   <div class="fruit_detail-box">
                       <h8>
-                          CÚC HỌA MI
+                          Chrysanthemum of the United States
                       </h8>
                       <div>
                           <h class="mt-4 mb-5">
-                              Hoa cúc họa mi trong tâm linh của người Việt là loại hoa có phong thủy rất tốt, nó biểu trưng cho sự cao quý của sự sống, sự thịnh vượng và tình cảm thương yêu, hiếu thảo của con người. Cúc họa mi thường được sử dụng trong các đám cưới vì hoa đại diện của tình yêu lâu dài, vĩnh cửu, mong manh, thuần khiết.
-                          </h>
+                              The chrysanthemum flower in Vietnamese spirituality is a flower with very good feng shui, it symbolizes the nobility of life, prosperity and love and filial piety of people. Chrysanthemums are often used in weddings because the flower represents long, eternal, fragile, pure love.                          </h>
                       </div>
 
                       <div>
                           <h href="" class="custom_dark-btn">
-                              Đọc thêm
+                              Read more
                           </h>
                       </div>
                   </div>
