@@ -73,7 +73,6 @@
                     <h class="mb-0 me-2">Don't have an account?</h>
                     <button type="button" class="btn btn-outline-danger">Create new</button>
                   </div>
-
                 </form>
 
               </div>

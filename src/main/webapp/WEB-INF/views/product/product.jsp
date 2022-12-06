@@ -484,7 +484,7 @@
                         <a href="#">1</a>
                         <a href="#">2</a>
                         <a href="#">3</a>
-                        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div>
             </div>
