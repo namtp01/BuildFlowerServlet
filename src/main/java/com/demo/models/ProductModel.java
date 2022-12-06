@@ -12,8 +12,7 @@ public class ProductModel extends AbstractModel<ProductEntity>{
     public ProductModel() {
         super(ProductEntity.class);
     }
-    
-    @SuppressWarnings("unchecked")
+
     public List<ProductEntity> findAll() {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();

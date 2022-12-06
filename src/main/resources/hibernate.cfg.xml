@@ -10,6 +10,7 @@
         <property name="hibernate.connection.password">7b995357</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
         <mapping class="com.demo.entities.AccountEntity"/>
         <mapping resource="AccountEntity.hbm.xml"/>
         <mapping class="com.demo.entities.CategoryEntity"/>
@@ -29,7 +30,7 @@
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+
+
     </session-factory>
 </hibernate-configuration>
