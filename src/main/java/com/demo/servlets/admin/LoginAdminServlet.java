@@ -15,7 +15,7 @@ public class LoginAdminServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null) {
-            request.getRequestDispatcher("../WEB-INF/views/admin/login/index.jsp").forward(request, response);
+            request.getRequestDispatcher("../WEB-INF/views/admin/login/login.jsp").forward(request, response);
         } else {
             if (action.equalsIgnoreCase("logout")) {
                 doGet_Logout(request, response);
@@ -74,7 +74,7 @@ public class LoginAdminServlet extends HttpServlet {
             response.sendRedirect("../admin/dashboard");
         } else {
             request.setAttribute("err", "Invalid");
-            request.getRequestDispatcher("../WEB-INF/views/admin/login/index.jsp").forward(request,response);
+            request.getRequestDispatcher("../WEB-INF/views/admin/login/login.jsp").forward(request,response);
         }
     }
 
