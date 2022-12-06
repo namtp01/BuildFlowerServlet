@@ -13,15 +13,11 @@
                             <h4>Department</h4>
                             <ul>
                                 <li><a href="#">Hoa Chúc Mừng</a></li>
-                                <li><a href="#">Hoa Cưới</a></li>
-                                <li><a href="#">Hoa Sinh Nhật </a></li>
                                 <li><a href="#">Hoa Chia Buồn</a></li>
-                                <li><a href="#">Hoa Khai Trương</a></li>
+                                <li><a href="#">Hoa Cưới</a></li>
                                 <li><a href="#">Bó Hoa</a></li>
                                 <li><a href="#">Giỏ Hoa</a></li>
                                 <li><a href="#">Hoa Bình</a></li>
-                                <li><a href="#">Kệ Hoa</a></li>
-                                <li><a href="#">Hoa Hộp</a></li>
                                 <li><a href="#">Phụ kiện</a></li>
                             </ul>
                         </div>

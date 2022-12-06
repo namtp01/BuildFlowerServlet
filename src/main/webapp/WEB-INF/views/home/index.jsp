@@ -14,7 +14,6 @@
             </div>
         </div>
         <div class="container">
-
             <div class="row">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
