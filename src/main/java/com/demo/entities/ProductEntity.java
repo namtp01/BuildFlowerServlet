@@ -42,8 +42,22 @@ public class ProductEntity implements java.io.Serializable {
     @Column(name = "featured", nullable = false)
     private boolean featured;
     @Basic
-    @Column(name = "category_id", nullable = false)
+    @Column(name = "categoryId", nullable = false)
     private int categoryId;
+
+    public ProductEntity() {}
+
+    public ProductEntity(int id, String name, double price, int quantity, String description, String details, boolean status, boolean featured, int categoryId) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.description = description;
+        this.details = details;
+        this.status = status;
+        this.featured = featured;
+        this.categoryId = categoryId;
+    }
 
     public CategoryEntity getCategory() {
         return this.category;

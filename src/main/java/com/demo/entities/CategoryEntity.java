@@ -35,6 +35,14 @@ public class CategoryEntity implements java.io.Serializable{
         this.category = category;
     }
 
+    public CategoryEntity() { }
+
+    public CategoryEntity(int id, String name, boolean status, CategoryEntity category) {
+        this.category = category;
+        this.id = id;
+        this.name = name;
+        this.status = status;
+    }
 
     public int getId() {
         return id;

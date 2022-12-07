@@ -1,4 +1,4 @@
-package com.demo.models;
+/*package com.demo.models;
 
 import org.hibernate.*;
 import java.io.*;
@@ -99,4 +99,4 @@ public abstract class AbstractModel<T> {
             session.close();
         }
     }
-}
+}*/

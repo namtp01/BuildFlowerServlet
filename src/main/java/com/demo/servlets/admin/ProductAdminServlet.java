@@ -5,13 +5,16 @@ import com.demo.entities.ProductEntity;
 import com.demo.models.CategoryModel;
 import com.demo.models.ProductModel;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/admin/product")
 @MultipartConfig(
@@ -22,48 +25,28 @@ import java.io.IOException;
 public class ProductAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action");
-        if (action == null) {
-            doGet_List(request, response);
-        } else {
-            if (action.equalsIgnoreCase("add")) {
-                doGet_Add(request, response);
-            }
-        }
-    }
 
-    protected void doGet_Add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/admin/product/add_product.jsp").forward(request,response);
-    }
-
-    protected void doGet_List(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProductModel productModel = new ProductModel();
-        request.setAttribute("products", productModel.findAll());
-        request.getRequestDispatcher("../WEB-INF/views/admin/product/product.jsp").forward(request,response);
+        List<ProductEntity> products = ProductModel.findAllProduct();
+        ServletContext sc = getServletContext();
+        String url = "/WEB-INF/views/admin/product/product.jsp";
+        //String index_message = "LOG IN";
+        HttpSession session = request.getSession();
+        //try{
+        //      ProductEntity current_account = (ProductEntity) session.getAttribute("account");
+        //      index_message = "Hello " + current_account.getFullname();
+        //}
+        //catch(Exception e){
+        //      index_message = "LOG IN";
+        //}
+        request.setAttribute("products", products);
+        //request.setAttribute("indexmessage",index_message);
+        sc.getRequestDispatcher(url).
+                forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action");
-        if (action.equalsIgnoreCase("add")) {
-            doPost_Add(request, response);
-        }
-    }
-
-    protected void doPost_Add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProductEntity productEntity = new ProductEntity();
-        ProductModel productModel = new ProductModel();
-        CategoryModel categoryModel = new CategoryModel();
-        productEntity.setCategory(categoryModel.find(Integer.parseInt(request.getParameter("category"))));
-        productEntity.setDescription(request.getParameter("description").trim());
-        productEntity.setDetails(request.getParameter("details").trim());
-        productEntity.setFeatured(request.getParameter("featured") != null);
-        productEntity.setName(request.getParameter("name").trim());
-        productEntity.setPrice(Double.parseDouble(request.getParameter("price").trim()));
-        productEntity.setQuantity(Integer.parseInt(request.getParameter("quantity").trim()));
-        productEntity.setStatus(request.getParameter("status") != null);
-        productModel.create(productEntity);
-        response.sendRedirect("product");
+        doGet(request, response);
     }
 
 

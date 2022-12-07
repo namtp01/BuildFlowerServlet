@@ -1,64 +1,43 @@
 package com.demo.models;
 
 import com.demo.entities.AccountEntity;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.mindrot.jbcrypt.BCrypt;
+import com.demo.utility.DBUtil;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+import java.io.IOException;
+import java.util.List;
 
 
-public class AccountModel extends AbstractModel<AccountEntity>{
-    public AccountModel() {
-        super(AccountEntity.class);
+public class AccountModel{
+    public static void insertAccount(int account_id, String username, String password, String full_name, String address, String email, String phone, byte status, int role_id) throws IOException {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        AccountEntity account = new AccountEntity(account_id, username, password, full_name, address, email, phone, status, role_id);
+        trans.begin();
+        em.persist(account);
+        trans.commit();
     }
 
-    public AccountEntity find(String username) {
-        AccountEntity accountEntity = null;
-        Session session = sessionFactory.openSession();
-        Transaction transaction = null;
+    public static List<AccountEntity> findAllAccount() {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM AccountEntity b";
+        trans.begin();
+        TypedQuery<AccountEntity> q = em.createQuery(qString, AccountEntity.class);
+        List<AccountEntity> accountEntityList;
         try {
-            transaction = session.beginTransaction();
-            accountEntity = (AccountEntity) session.createQuery("from AccountEntity where username = :username")
-                    .setParameter("username", username).getSingleResult();
-            transaction.commit();
-        } catch (Exception e) {
-            accountEntity = null;
-            if (transaction != null) {
-                transaction.rollback();
+            accountEntityList = q.getResultList();
+            if (accountEntityList == null || accountEntityList.isEmpty()) {
+                accountEntityList= null;;
             }
-        } finally {
-            session.close();
-        }
-        return accountEntity;
-    }
 
-    public AccountEntity find(String username, int role) {
-        AccountEntity accountEntity = null;
-        Session session = sessionFactory.openSession();
-        Transaction transaction = null;
-        try {
-            transaction = session.beginTransaction();
-            accountEntity = (AccountEntity) session.createQuery("from AccountEntity where username = :username and roleId = :role_id")
-                    .setParameter("role_id", role)
-                    .setParameter("username", username).getSingleResult();
-            transaction.commit();
-        } catch (Exception e) {
-            accountEntity = null;
-            if (transaction != null) {
-                transaction.rollback();
-            }
-        } finally {
-            session.close();
         }
-        return accountEntity;
-    }
-
-    public AccountEntity login(String username, String password, int roleId) {
-        AccountEntity accountEntity = find(username, roleId);
-        if(accountEntity != null) {
-            if (BCrypt.checkpw(password, accountEntity.getPassword())) {
-                return accountEntity;
-            }
+        finally {
+            em.close();
         }
-        return null;
+        trans.commit();
+        return accountEntityList;
     }
 }

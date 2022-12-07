@@ -60,21 +60,18 @@
                                         <th>Address</th>
                                         <th>Email</th>
                                         <th>Phone</th>
-                                        <th>Status</th>
-                                        <th>Role</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <c:forEach var="user" items="${users}">
                                     <tr>
-                                        <td>ThuThao12</td>
-                                        <td>Password</td>
-                                        <td>Thai Thi Thu Thao</td>
-                                        <td>Hell</td>
-                                        <td>19110515@student.hcmute.edu.vn</td>
-                                        <td>0000000001</td>
-                                        <td>Active</td>
-                                        <td>Admin</td>
+                                        <td>${user.username}</td>
+                                        <td>${user.password}</td>
+                                        <td>${user.fullName}</td>
+                                        <td>${user.address}</td>
+                                        <td>${user.email}</td>
+                                        <td>${user.phone}</td>
                                         <td>
                                             <form action="${pageContext.request.contextPath}/admin/general">
                                                 <input type="submit" class="btn btn-primary float-left" value="Edit"/>
@@ -84,26 +81,7 @@
                                             </form>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>LuanPOP12</td>
-                                        <td>Pass/Pass</td>
-                                        <td>Bui Huu Luan</td>
-                                        <td>Highway</td>
-                                        <td>19110088@student.hcmute.edu.vn</td>
-                                        <td>0000000014</td>
-                                        <td>Active</td>
-                                        <td>Admin</td>
-                                    </tr>
-                                    <tr>
-                                        <td>HuongNhay</td>
-                                        <td>LazyTown</td>
-                                        <td>Vo Thi Huynh Huong</td>
-                                        <td>Tam Cam</td>
-                                        <td>191100084@student.hcmute.edu.vn</td>
-                                        <td>0000000004</td>
-                                        <td>Active</td>
-                                        <td>Admin</td>
-                                    </tr>
+                                    </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

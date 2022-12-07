@@ -34,6 +34,20 @@ public class AccountEntity implements java.io.Serializable {
     @Column(name = "role_id", nullable = false)
     private int roleId;
 
+    public AccountEntity() { }
+
+    public AccountEntity(int id, String username, String password, String fullName, String address, String email, String phone, byte status, int roleId) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.fullName = fullName;
+        this.address = address;
+        this.email = email;
+        this.phone = phone;
+        this.status = status;
+        this.roleId = roleId;
+    }
+
     public int getId() {
         return id;
     }

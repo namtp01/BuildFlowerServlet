@@ -35,24 +35,20 @@
                                 <th>Name</th>
                                 <th>Price</th>
                                 <th>Category</th>
-                                <th>Size</th>
-                                <th>Status</th>
-                                <th>Featured</th>
+                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach var="product" items="${products }">
-                                <tr>
-                                    <td>${product.id }</td>
-                                    <td>${product.name }</td>
-                                    <td>${product.price }</td>
-                                    <td>${product.category.name }</td>
-                                    <td>${product.size }</td>
-                                    <td>${product.status ? "Show" : "Hide" }</td>
-                                    <td>${product.featured ? "Featured" : "" }</td>
-                                    <th>Edit | Delete</th>
-                                </tr>
+                            <c:forEach var="product" items="${products}">
+                            <tr>
+                                <td>${product.id}</td>
+                                <td>${product.name}</td>
+                                <td>${product.price}</td>
+                                <td>${product.quantity}</td>
+                                <td>${product.description}</td>
+                                <td>Edit | Delete</td>
+                            </tr>
                             </c:forEach>
                             </tbody>
                             <tfoot>
@@ -61,9 +57,7 @@
                                 <th>Name</th>
                                 <th>Price</th>
                                 <th>Category</th>
-                                <th>Size</th>
-                                <th>Status</th>
-                                <th>Featured</th>
+                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                             </tfoot>

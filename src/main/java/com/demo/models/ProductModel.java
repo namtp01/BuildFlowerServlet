@@ -2,18 +2,22 @@ package com.demo.models;
 
 import com.demo.entities.ProductEntity;
 import com.demo.utility.DBUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 import javax.persistence.*;
+import java.io.IOException;
 import java.util.List;
 
-public class ProductModel extends AbstractModel<ProductEntity>{
-    public ProductModel() {
-        super(ProductEntity.class);
+public class ProductModel{
+    public static void insertProduct(int product_id, String name, double price, int quanity, String description, String details, boolean status, boolean featured, int category_id) throws IOException {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        ProductEntity product = new ProductEntity(product_id, name, price, quanity, description, details, status, featured, category_id);
+        trans.begin();
+        em.persist(product);
+        trans.commit();
     }
 
-    public List<ProductEntity> findAll() {
+    public static List<ProductEntity> findAllProduct() {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
         String qString = "SELECT b FROM ProductEntity b";
