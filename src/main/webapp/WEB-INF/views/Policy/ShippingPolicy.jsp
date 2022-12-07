@@ -9,18 +9,20 @@
               <div class="row">
                   <div class="col-lg-12 text-center">
                       <div class="breadcrumb__text">
-                          <h2>Introduce</h2>
+                          <h2>Shipping Policy</h2>
                       </div>
                   </div>
               </div>
           </div>
       </section>
+
       <div class="container">
           <div class="row layout_padding2">
               <div class="col-md-12">
                   <div class="fruit_detail-box">
                       <h8>
-                          Shipping way                      </h8>
+                          Shipping way
+                      </h8>
                       <div>
                           <h class="mt-4 mb-5">
                               Will call customers directly to confirm the final order, before the order begins to be shipped.                          </h>
@@ -31,7 +33,8 @@
                       </div>
                       <div>
                           <h href="" class="mt-4 mb-5">
-                              Freeship bill over 1,000,000 VND, applicable for orders in HCMC                      </div>
+                              Freeship bill over 1,000,000 VND, applicable for orders in HCMC   </h>
+                      </div>
                   </div>
               </div>
 

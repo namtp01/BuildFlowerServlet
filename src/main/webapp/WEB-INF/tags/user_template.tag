@@ -216,8 +216,7 @@
                         </h2>
                     </div>
                     <p>
-                        Hoa Cúc Họa Mi thường được sử dụng trong các đám cưới vì hoa đại diện của tình yêu lâu dài, vĩnh cửu, mong manh, thuần khiết, hoa còn là biểu tượng của hơi trẻ thơ. Trong ý nghĩa các loài hoa cưới phổ biến thì Cúc Họa Mi tượng trưng cho tình yêu tinh khôi, giản dị mà rất đỗi chân thành.
-                    </p>
+                        The nightingale chrysanthemum is often used in weddings because the flower represents long-lasting, eternal, fragile, pure love, the flower is also a symbol of childhood. In the sense of popular wedding flowers, chrysanthemums symbolize pure, simple but very sincere love.                    </p>
                 </div>
             </div>
 
@@ -271,37 +270,42 @@
                 <div class="box-1-container">
                     <div class="b-1">
                         <div class="img-box">
-                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa1.png" alt="">
+                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/t1.png" alt="">
                         </div>
                         <div class="img-box">
-                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa2.png" alt="">
+                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/t3.png" alt="">
+                        </div>
+                        <div class="img-box">
+                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/t12.png" alt="">
                         </div>
                     </div>
                     <div class="b-2">
                         <div class="img-box">
-                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa3.png" alt="">
+                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/t10.png" alt="">
                         </div>
                         <div class="img-box">
-                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa4.png" alt="">
+                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/t8.png" alt="">
                         </div>
+                        <div class="img-box">
+                            <img src="${pageContext.request.contextPath}/assets/user/dist/images/t11.png" alt="">
+                        </div>
+
                     </div>
                 </div>
-                <div class="b-3">
-                    <div class="img-box">
-                        <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa5.png" alt="">
-                    </div>
-                </div>
+
             </div>
             <div class="box-2">
                 <div class="img-box">
-                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa6.png" alt="">
+                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/t7.png" alt="">
                 </div>
                 <div class="img-box">
-                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa7.png" alt="">
+                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/t6.png" alt="">
                 </div>
-                <div class="img-box flex-grow-1">
-                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa8.png" alt="">
+                <div class="img-box">
+                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/thong.png" alt="">
                 </div>
+
+
             </div>
         </div>
     </div>
