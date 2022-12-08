@@ -1,34 +1,42 @@
 package com.demo.models;
 
 import com.demo.entities.CategoryEntity;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import com.demo.utility.DBUtil;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+import java.io.IOException;
 import java.util.List;
 
-public class CategoryModel extends AbstractModel<CategoryEntity>{
-    public CategoryModel() {
-        super(CategoryEntity.class);
+public class CategoryModel{
+    public static void insertCategory(int id, String name, Boolean status, CategoryEntity category_id) throws IOException {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        CategoryEntity category = new CategoryEntity(id, name, status, category_id);
+        trans.begin();
+        em.persist(category);
+        trans.commit();
     }
 
-    @SuppressWarnings("unchecked")
-    public List<CategoryEntity> findCategoryLevel1() {
-        List<CategoryEntity> result = null;
-        Session session = sessionFactory.openSession();
-        Transaction transaction = null;
+    public static List<CategoryEntity> findAllCategory() {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM CategoryEntity b";
+        trans.begin();
+        TypedQuery<CategoryEntity> q = em.createQuery(qString, CategoryEntity.class);
+        List<CategoryEntity> categoryEntityList;
         try {
-            transaction = session.beginTransaction();
-            result = session.createQuery("from CategoryEntity where category = null ")
-                    .list();
-            transaction.commit();
-        } catch (Exception e) {
-            result = null;
-            if (transaction != null) {
-                transaction.rollback();
+            categoryEntityList= q.getResultList();
+            if (categoryEntityList == null || categoryEntityList.isEmpty()) {
+                categoryEntityList= null;;
             }
-        } finally {
-            session.close();
+
         }
-        return result;
+        finally {
+            em.close();
+        }
+        trans.commit();
+        return categoryEntityList;
     }
 }

@@ -43,7 +43,8 @@
                                     <td>${category.id }</td>
                                     <td>${category.name }</td>
                                     <td>${category.status ? "Show" : "Hide" }</td>
-                                    <td><a href="${pageContext.request.contextPath}/admin/category?action=edit&id=${category.id }">Edit</a>
+                                    <td>
+                                        <a href="${pageContext.request.contextPath}/admin/category?action=edit&id=${category.id }">Edit</a>
                                         |
                                         <a href="${pageContext.request.contextPath}/admin/category?action=delete&id=${category.id }" onclick="return confirm('Do you want to delete ?')">Delete</a>
                                     </td>
