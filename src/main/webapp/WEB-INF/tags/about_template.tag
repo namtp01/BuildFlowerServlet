@@ -82,7 +82,18 @@
                 <div class="navbar-nav ml-auto py-0">
                     <a class="nav-item nav-link active" href="${pageContext.request.contextPath}/home">Home<span class="sr-only">(current)</span></a>
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/about">About</a>
-                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/product">Product</a>
+                    <div class="dropdown">
+                        <a class="nav-item nav-link" href="${pageContext.request.contextPath}/product">Product</a>
+                        <div class="dropdown-content">
+                            <a href="#">Congratulations Flowers</a>
+                            <a href="#">Wedding Flowers</a>
+                            <a href="#">Consolation Flowers</a>
+                            <a href="#">Bouquet</a>
+                            <a href="#">Basket of Flowers</a>
+                            <a href="#">Vase of Flowers</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
                 </div>
                 <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                     <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>LOTUS</h1>
@@ -104,7 +115,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="breadcrumb__text">
-                    <h2>Nghe Hoa Ke</h2>
+                    <h2>Listen to Flowers Tell</h2>
                 </div>
             </div>
         </div>

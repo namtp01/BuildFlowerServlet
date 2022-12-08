@@ -36,6 +36,27 @@
               </div>
 
           </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 col-xl-7">
+                      <div class="img-box">
+                          <img src="${pageContext.request.contextPath}/assets/user/dist/images/store.png" alt="" />
+                      </div>
+                  </div>
+                  <div class="col-md-5 col-xl-5">
+                      <div class="detail_box">
+                          <div class="heading_container justify-content-end">
+                              <h2>
+                                  STORE
+                              </h2>
+                          </div>
+                          <h>
+                              The nightingale chrysanthemum is often used in weddings because the flower represents long-lasting, eternal, fragile, pure love, the flower is also a symbol of childhood. In the sense of popular wedding flowers, chrysanthemums symbolize pure, simple but very sincere love.                    </h>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
           <div class="row layout_padding2">
               <div class="col-md-12">
                   <div class="fruit_detail-box">
