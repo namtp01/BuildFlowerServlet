@@ -74,10 +74,9 @@
                                         <td>${user.email}</td>
                                         <td>${user.phone}</td>
                                         <td>
-                                            <form action="${pageContext.request.contextPath}/admin/edit_user">
-                                                <input type="submit" class="btn btn-success float-left" value="Edit"/>
-                                            </form>
-                                            <a href="delete?id=<c:out value='${user.id}'/> " class="btn btn-warning float-left">Delete</a>
+                                            <a class="btn btn-success" href="${pageContext.request.contextPath}/admin/user?action=edit id=<c:out value='${user.id}'/> ">Edit</a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-warning" href="${pageContext.request.contextPath}/admin/user?action=delete id=<c:out value='${user.id}' />">Delete</a>
                                         </td>
                                     </tr>
                                     </c:forEach>

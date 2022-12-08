@@ -84,7 +84,7 @@
                 </div>
                 <div class="info">
                     <a href="${pageContext.request.contextPath}/admin/login?action=profile" class="d-block">${sessionScope.username_admin}</a>
-                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="${pageContext.request.contextPath}/admin/login?action=logout" class="d-block">Logout</a>
                 </div>
             </div>

@@ -20,39 +20,27 @@ import java.util.List;
 public class AdminUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        List<AccountEntity> users = AccountModel.findAllAccount();
-        ServletContext sc = getServletContext();
-        String url = "/WEB-INF/views/admin/admin-user/admin_user.jsp";
-        //String index_message = "LOG IN";
-        HttpSession session = request.getSession();
-        //try{
-        //      ProductEntity current_account = (ProductEntity) session.getAttribute("account");
-        //      index_message = "Hello " + current_account.getFullname();
-        //}
-        //catch(Exception e){
-        //      index_message = "LOG IN";
-        //}
-        request.setAttribute("users", users);
-        //request.setAttribute("indexmessage",index_message);
-        sc.getRequestDispatcher(url).forward(request, response);
-
         String action = request.getServletPath();
 
+        //String act = request.getParameter("action");
+
         switch (action) {
-            case "/update":
+            case "edit":
                 try {
                     updateUser(request, response);
                 } catch (Exception e) {
                     System.out.println(e);
                 }
                 break;
-            case "/delete":
+            case "delete":
                 try {
                     deleteUser(request, response);
                 } catch (Exception e) {
                     System.out.println(e);
                 }
+                break;
+            default:
+                listUser(request, response);
                 break;
         }
     }
@@ -62,10 +50,17 @@ public class AdminUserServlet extends HttpServlet {
         doGet(request, response);
     }
 
+    private void listUser(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        List <AccountEntity> listUser = AccountModel.findAllAccount();
+        request.setAttribute("users", listUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/admin/admin-user/admin_user.jsp");
+        dispatcher.forward(request, response);
+    }
+
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         AccountModel.deleteUser(id);
-        response.sendRedirect("list");
+        response.sendRedirect("/admin/user");
     }
 
     private void updateUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -73,5 +68,6 @@ public class AdminUserServlet extends HttpServlet {
         String username = request.getParameter("username");
         AccountEntity account = AccountModel.findAccount(id);
         account.setUsername(username);
+        response.sendRedirect("/admin/user");
     }
 }
