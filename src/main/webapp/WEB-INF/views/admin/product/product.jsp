@@ -26,6 +26,26 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                        <form action="${pageContext.request.contextPath}/admin/add_product">
+                            <input type="submit" class="btn btn-primary float-right" value="Add user"/>
+                        </form>
+                    </div>
+                    <div class="row card-header">
+                        <div class="col-md-8 offset-md-2">
+                            <form action="#">
+                                <div class="input-group">
+                                    <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-lg btn-default">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="example2" class="table table-bordered table-striped">
@@ -47,7 +67,14 @@
                                 <td>${product.price}</td>
                                 <td>${product.quantity}</td>
                                 <td>${product.description}</td>
-                                <td>Edit | Delete</td>
+                                <td>
+                                    <form action="${pageContext.request.contextPath}/admin/general">
+                                        <input type="submit" class="btn btn-primary float-left" value="Edit"/>
+                                    </form>
+                                    <form action="${pageContext.request.contextPath}/admin/general">
+                                        <input type="submit" class="btn btn-primary float-right" value="Delete"/>
+                                    </form>
+                                </td>
                             </tr>
                             </c:forEach>
                             </tbody>

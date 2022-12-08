@@ -11,6 +11,11 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name="AdminUserServlet", value = "/admin/user")
+@MultipartConfig(
+        fileSizeThreshold = 1024 * 1024 * 10,
+        maxFileSize = 1024 * 1024 * 50,
+        maxRequestSize = 1024 * 1024 * 100
+)
 public class AdminUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

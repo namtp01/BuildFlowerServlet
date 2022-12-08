@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
 <mt:admin_template title="admin-user">
     <jsp:attribute name="content">
@@ -31,7 +32,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">DataTable with minimal features & hover style</h3>
-                                <form action="${pageContext.request.contextPath}/admin/general">
+                                <form action="${pageContext.request.contextPath}/admin/add_user">
                                     <input type="submit" class="btn btn-primary float-right" value="Add user"/>
                                 </form>
                             </div>
@@ -51,7 +52,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="user-table" class="table table-bordered table-hover">
+                                <table id="user-table" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
                                         <th>Username</th>
@@ -73,15 +74,26 @@
                                         <td>${user.email}</td>
                                         <td>${user.phone}</td>
                                         <td>
-                                            <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-primary float-left" value="Edit"/>
+                                            <form action="${pageContext.request.contextPath}/admin/edit_user">
+                                                <input type="submit" class="btn btn-success float-left" value="Edit"/>
                                             </form>
                                             <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-primary float-right" value="Delete"/>
+                                                <input type="submit" class="btn btn-danger float-right" value="Delete"/>
                                             </form>
                                         </td>
                                     </tr>
                                     </c:forEach>
+                                    <tfoot>
+                                    <tr>
+                                        <th>Username</th>
+                                        <th>Password</th>
+                                        <th>Full name</th>
+                                        <th>Address</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </tfoot>
                                     </tbody>
                                 </table>
                             </div>
