@@ -30,7 +30,7 @@ public class AccountModel{
         try {
             accountEntityList = q.getResultList();
             if (accountEntityList == null || accountEntityList.isEmpty()) {
-                accountEntityList= null;;
+                accountEntityList= null;
             }
 
         }
@@ -39,5 +39,37 @@ public class AccountModel{
         }
         trans.commit();
         return accountEntityList;
+    }
+
+    public static AccountEntity findAccount(int id) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        AccountEntity account = new AccountEntity();
+        try {
+            account = em.find(AccountEntity.class, id);
+            trans.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
+        return account;
+    }
+
+    public static void deleteUser(int id) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        try {
+            em.remove(em.find(AccountEntity.class, id));
+            trans.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
     }
 }

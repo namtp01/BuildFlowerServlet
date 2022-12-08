@@ -77,9 +77,7 @@
                                             <form action="${pageContext.request.contextPath}/admin/edit_user">
                                                 <input type="submit" class="btn btn-success float-left" value="Edit"/>
                                             </form>
-                                            <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-danger float-right" value="Delete"/>
-                                            </form>
+                                            <a href="delete?id=<c:out value='${user.id}'/> " class="btn btn-warning float-left">Delete</a>
                                         </td>
                                     </tr>
                                     </c:forEach>

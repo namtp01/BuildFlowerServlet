@@ -8,6 +8,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name="AdminUserServlet", value = "/admin/user")
@@ -34,12 +35,43 @@ public class AdminUserServlet extends HttpServlet {
         //}
         request.setAttribute("users", users);
         //request.setAttribute("indexmessage",index_message);
-        sc.getRequestDispatcher(url).
-                forward(request, response);
+        sc.getRequestDispatcher(url).forward(request, response);
+
+        String action = request.getServletPath();
+
+        switch (action) {
+            case "/update":
+                try {
+                    updateUser(request, response);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+            case "/delete":
+                try {
+                    deleteUser(request, response);
+                } catch (Exception e) {
+                    System.out.println(e);
+                }
+                break;
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
+    }
+
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        AccountModel.deleteUser(id);
+        response.sendRedirect("list");
+    }
+
+    private void updateUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String username = request.getParameter("username");
+        AccountEntity account = AccountModel.findAccount(id);
+        account.setUsername(username);
     }
 }
