@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="BuildFlowerServlet:war2">
+    <output-path>$PROJECT_DIR$/out/artifacts/BuildFlowerServlet_war2</output-path>
+    <root id="archive" name="BuildFlowerServlet_war.war">
+      <element id="artifact" artifact-name="BuildFlowerServlet:war exploded" />
+    </root>
+  </artifact>
+</component>
