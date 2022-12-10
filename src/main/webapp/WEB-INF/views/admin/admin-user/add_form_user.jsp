@@ -46,10 +46,6 @@
                                                 <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword2">Re-enter Password</label>
-                                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
                                                 <label for="inputFullName">Full Name</label>
                                                 <input type="text" class="form-control" id="inputFullName" placeholder="Password">
                                             </div>
@@ -66,8 +62,8 @@
                                                 <input type="number" class="form-control" id="inputPhone" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="checkRole">Role</label>
-                                                <div class="row" id="checkRole">
+                                                <label for="inputRole">Role</label>
+                                                <div class="row" id="inputRole">
                                                     <div class="form-check col-sm-6">
                                                         <input type="radio" class="form-check-input" id="checkAdmin" checked="checked" name="role">
                                                         <label class="form-check-label" for="checkAdmin">Admin</label>
