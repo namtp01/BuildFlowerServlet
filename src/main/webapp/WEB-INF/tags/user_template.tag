@@ -93,7 +93,7 @@
     <!-- end header section -->
     <!-- slider section -->
     <section class=" slider_section position-relative">
-        <jsp:invoke fragment="content"></jsp:invoke>
+        <jsp:invoke fragment="content"/>
 
         <%--        <div class="slider_number-container ">--%>
         <%--            <div class="number-box">--%>
@@ -194,7 +194,7 @@
         <div class="row">
             <div class="col-md-6 col-xl-7">
                 <div class="img-box">
-                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/hoa5.png" alt="" />
+                    <img src="${pageContext.request.contextPath}/assets/user/dist/images/t12.png" alt="" height="750"/>
                 </div>
             </div>
             <div class="col-md-5 col-xl-5">

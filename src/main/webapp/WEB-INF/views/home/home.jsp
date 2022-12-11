@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-lg-6 col-md-8">
+                            <div class="col-lg-7 col-md-8">
                                 <div class="detail_box">
                                     <h2>
                                         Welcome
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-lg-6 col-md-8">
+                            <div class="col-lg-7 col-md-8">
                                 <div class="detail_box">
                                     <h2>
                                         Welcome

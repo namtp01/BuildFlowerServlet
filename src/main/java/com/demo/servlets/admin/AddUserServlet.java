@@ -16,6 +16,6 @@ public class AddUserServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/admin/admin_user/add_form_user.jsp").forward(request,response);
+        request.getRequestDispatcher("../WEB-INF/views/admin/admin-user/add_form_user.jsp").forward(request,response);
     }
 }

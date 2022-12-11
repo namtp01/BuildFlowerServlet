@@ -46,10 +46,6 @@
                                                 <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword2">Re-enter Password</label>
-                                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
                                                 <label for="inputFullName">Full Name</label>
                                                 <input type="text" class="form-control" id="inputFullName" placeholder="Password">
                                             </div>
