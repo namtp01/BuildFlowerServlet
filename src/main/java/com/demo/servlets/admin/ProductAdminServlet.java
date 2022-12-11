@@ -1,8 +1,6 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.CategoryEntity;
 import com.demo.entities.ProductEntity;
-import com.demo.models.CategoryModel;
 import com.demo.models.ProductModel;
 
 import javax.servlet.ServletContext;
@@ -46,7 +44,12 @@ public class ProductAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
+        String action = request.getParameter("delete-product");
+        int id = Integer.parseInt(request.getParameter("id"));
+
+        if (!action.equals("")) {
+
+        }
     }
 
 

@@ -2,7 +2,6 @@ package com.demo.servlets.admin;
 
 import com.demo.entities.AccountEntity;
 import com.demo.models.AccountModel;
-import com.demo.models.ProductModel;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -40,6 +39,11 @@ public class AdminUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
+        String action = request.getParameter("delete-user");
+        int id = Integer.parseInt(request.getParameter("id"));
+
+        if (!action.equals("")) {
+
+        }
     }
 }

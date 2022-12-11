@@ -74,12 +74,12 @@
                                         <td>${user.email}</td>
                                         <td>${user.phone}</td>
                                         <td>
-                                            <form action="${pageContext.request.contextPath}/admin/edit_user">
+                                            <form action="${pageContext.request.contextPath}/admin/edit_user?id=<c:out value='${user.id}'/>">
                                                 <input type="submit" class="btn btn-success" value="Edit"/>
                                             </form>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <form action="${pageContext.request.contextPath}/admin/general">
-                                                <input type="submit" class="btn btn-danger" value="Delete"/>
+                                            <form method="post">
+                                                <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/user?id=<c:out value='${user.id}'/>" id="delete-user">Delete</a>
                                             </form>
                                         </td>
                                     </tr>

@@ -68,11 +68,11 @@
                                 <td>${product.quantity}</td>
                                 <td>${product.description}</td>
                                 <td>
-                                    <form action="${pageContext.request.contextPath}/admin/general">
-                                        <input type="submit" class="btn btn-primary float-left" value="Edit"/>
+                                    <form action="${pageContext.request.contextPath}/admin/edit_product?id=<c:out value='${product.id}'/>">
+                                        <input type="submit" class="btn btn-success" value="Edit"/>
                                     </form>
-                                    <form action="${pageContext.request.contextPath}/admin/general">
-                                        <input type="submit" class="btn btn-primary float-right" value="Delete"/>
+                                    <form method="post">
+                                        <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/product?id=<c:out value='${product.id}'/>" id="delete-product">Delete</a>
                                     </form>
                                 </td>
                             </tr>

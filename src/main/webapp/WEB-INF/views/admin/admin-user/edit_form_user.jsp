@@ -34,8 +34,7 @@
                                         <h3 class="card-title">Edit User form</h3>
                                     </div>
                                     <!-- /.card-header -->
-                                    <!-- form start -->
-                                    <form>
+                                    <form method="post">
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="editUsername">Username</label>

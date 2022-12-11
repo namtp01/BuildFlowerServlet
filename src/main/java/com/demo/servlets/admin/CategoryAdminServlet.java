@@ -1,9 +1,7 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.ProductEntity;
 import com.demo.models.CategoryModel;
 import com.demo.entities.CategoryEntity;
-import com.demo.models.ProductModel;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

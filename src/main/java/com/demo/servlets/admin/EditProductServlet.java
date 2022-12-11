@@ -1,8 +1,6 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.AccountEntity;
 import com.demo.entities.ProductEntity;
-import com.demo.models.AccountModel;
 import com.demo.models.ProductModel;
 
 import javax.servlet.ServletContext;
