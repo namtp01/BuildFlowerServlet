@@ -46,7 +46,6 @@
                                                 <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter password">
                                             </div>
                                         </div>
-                                        <!-- /.card-body -->
 
                                         <div class="card-footer">
                                             <button type="submit" class="btn btn-primary" name="submit-user" value="clicked">Submit</button>

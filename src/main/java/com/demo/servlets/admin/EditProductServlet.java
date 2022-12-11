@@ -1,5 +1,11 @@
 package com.demo.servlets.admin;
 
+import com.demo.entities.AccountEntity;
+import com.demo.entities.ProductEntity;
+import com.demo.models.AccountModel;
+import com.demo.models.ProductModel;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,11 +17,33 @@ import java.io.IOException;
 public class EditProductServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+
+        ServletContext sc = getServletContext();
+        String url = "/WEB-INF/views/admin/product/edit_form_product.jsp";
+
+        int id = Integer.parseInt(request.getParameter("id"));
+
+        ProductEntity product = ProductModel.findProduct(id);
+
+        request.setAttribute("editName", product.getName());
+        request.setAttribute("editQuantity", product.getQuantity());
+        request.setAttribute("editPrice", product.getPrice());
+
+        sc.getRequestDispatcher(url).forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/admin/admin_product/edit_form_product.jsp").forward(request,response);
+        String action = request.getParameter("save-product");
+
+        if (action.equals("saved")) {
+            String name = request.getParameter("editName");
+            String quantity = request.getParameter("editQuantity");
+            String price = request.getParameter("editPrice");
+
+            if (!name.equals("") && !quantity.equals("") && !price.equals("")) {
+                response.sendRedirect(request.getContextPath() + "/admin/product");
+            }
+        }
     }
 }

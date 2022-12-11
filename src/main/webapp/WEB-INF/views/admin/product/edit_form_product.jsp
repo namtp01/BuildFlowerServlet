@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<mt:admin_template title="add_product">
+<mt:admin_template title="edit_product">
     <jsp:attribute name="content">
         <body class="hold-transition sidebar-mini">
         <div class="wrapper">
@@ -11,12 +11,12 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Add Product</h1>
+                                <h1>Edit Product</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Add Product</li>
+                                    <li class="breadcrumb-item active">Edit Product</li>
                                 </ol>
                             </div>
                         </div>
@@ -31,29 +31,28 @@
                                 <!-- general form elements -->
                                 <div class="card card-primary">
                                     <div class="card-header">
-                                        <h3 class="card-title">Add Product form</h3>
+                                        <h3 class="card-title">Edit Product form</h3>
                                     </div>
                                     <!-- /.card-header -->
                                     <!-- form start -->
-                                    <form method="post">
+                                    <form>
                                         <div class="card-body">
                                             <div class="form-group">
-                                                <label for="inputName">Name</label>
-                                                <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter name">
+                                                <label for="editName">Name</label>
+                                                <input type="text" class="form-control" id="editName" name="editName" placeholder="Enter username">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputQuantity">Quantity</label>
-                                                <input type="number" class="form-control" id="inputQuantity" name="inputQuantity" placeholder="Enter quantity">
+                                                <label for="editQuantity">Quantity</label>
+                                                <input type="number" class="form-control" id="editQuantity" name="editQuantity" placeholder="Enter quantity">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPrice">Price</label>
-                                                <input type="text" class="form-control" id="inputPrice" name="inputPrice" placeholder="Enter price">
+                                                <label for="editPrice">Price</label>
+                                                <input type="text" class="form-control" id="editPrice" name="editPrice" placeholder="Enter price">
                                             </div>
-                                        </div>
-                                        <!-- /.card-body -->
 
-                                        <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary" name="submit-product" value="clicked">Submit</button>
+                                            <div class="card-footer">
+                                                <button type="submit" class="btn btn-primary" name="save-product" value="saved">Submit</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>

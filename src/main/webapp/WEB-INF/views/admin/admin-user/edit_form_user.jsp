@@ -38,51 +38,17 @@
                                     <form>
                                         <div class="card-body">
                                             <div class="form-group">
-                                                <label for="inputUsername">Username</label>
-                                                <input type="email" class="form-control" id="inputUsername" placeholder="Enter email">
+                                                <label for="editUsername">Username</label>
+                                                <input type="email" class="form-control" id="editUsername" name="editUsername" placeholder="Enter email">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputPassword2">Re-enter Password</label>
-                                                <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputFullName">Full Name</label>
-                                                <input type="password" class="form-control" id="inputFullName" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputAddress">Address</label>
-                                                <input type="password" class="form-control" id="inputAddress" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputEmail">Email</label>
-                                                <input type="password" class="form-control" id="inputEmail" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputPhone">Phone Number</label>
-                                                <input type="password" class="form-control" id="inputPhone" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="checkRole">Role</label>
-                                                <div class="row" id="checkRole">
-                                                    <div class="form-check col-sm-6">
-                                                        <input type="radio" class="form-check-input" id="checkAdmin" checked="checked" name="role">
-                                                        <label class="form-check-label" for="checkAdmin">Admin</label>
-                                                    </div>
-                                                    <div class="form-check col-sm-6">
-                                                        <input type="radio" class="form-check-input" id="checkUser" name="role">
-                                                        <label class="form-check-label" for="checkUser">User</label>
-                                                    </div>
-                                                </div>
+                                                <label for="editPassword">Password</label>
+                                                <input type="password" class="form-control" id="editPassword" name="editPassword" placeholder="Password">
                                             </div>
                                         </div>
-                                        <!-- /.card-body -->
 
                                         <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary">Save</button>
+                                            <button type="submit" class="btn btn-primary" name="save-user" value="saved">Save</button>
                                         </div>
                                     </form>
                                 </div>

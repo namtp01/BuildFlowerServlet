@@ -28,7 +28,7 @@ public class ProductAdminServlet extends HttpServlet {
 
         List<ProductEntity> products = ProductModel.findAllProduct();
         ServletContext sc = getServletContext();
-        String url = "/WEB-INF/views/admin/product/product.jsp";
+        String url = "/WEB-INF/views/admin/product/admin_product.jsp";
         //String index_message = "LOG IN";
         HttpSession session = request.getSession();
         //try{

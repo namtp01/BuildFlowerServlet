@@ -37,4 +37,21 @@ public class ProductModel{
         trans.commit();
         return productEntityList;
     }
+
+    public static ProductEntity findProduct(int id) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        ProductEntity account = new ProductEntity();
+        try {
+            account = em.find(ProductEntity.class, id);
+            trans.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
+        return account;
+    }
 }
