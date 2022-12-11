@@ -11,12 +11,12 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>General Form</h1>
+                                <h1>Add Product</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">General Form</li>
+                                    <li class="breadcrumb-item active">Add Product</li>
                                 </ol>
                             </div>
                         </div>
@@ -31,58 +31,29 @@
                                 <!-- general form elements -->
                                 <div class="card card-primary">
                                     <div class="card-header">
-                                        <h3 class="card-title">Add User form</h3>
+                                        <h3 class="card-title">Add Product form</h3>
                                     </div>
                                     <!-- /.card-header -->
                                     <!-- form start -->
-                                    <form>
+                                    <form method="post">
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="inputName">Name</label>
-                                                <input type="text" class="form-control" id="inputName" placeholder="Enter email">
+                                                <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter name">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputQuanity">Quanity</label>
-                                                <input type="number" class="form-control" id="inputQuanity" placeholder="Password">
+                                                <label for="inputQuantity">Quantity</label>
+                                                <input type="number" class="form-control" id="inputQuantity" name="inputQuantity" placeholder="Enter quantity">
                                             </div>
                                             <div class="form-group">
-                                                <label for="inputDescription">Description</label>
-                                                <input type="text" class="form-control" id="inputDescription" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputDetail">Detail</label>
-                                                <input type="text" class="form-control" id="inputDetail" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputFeatured">Featured</label>
-                                                <input type="text" class="form-control" id="inputFeatured" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputSize">Size</label>
-                                                <input type="text" class="form-control" id="inputSize" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputCategory">Category</label>
-                                                <input type="password" class="form-control" id="inputCategory" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="checkRole">Role</label>
-                                                <div class="row" id="checkRole">
-                                                    <div class="form-check col-sm-6">
-                                                        <input type="radio" class="form-check-input" id="checkAdmin" checked="checked" name="role">
-                                                        <label class="form-check-label" for="checkAdmin">Admin</label>
-                                                    </div>
-                                                    <div class="form-check col-sm-6">
-                                                        <input type="radio" class="form-check-input" id="checkUser" name="role">
-                                                        <label class="form-check-label" for="checkUser">User</label>
-                                                    </div>
-                                                </div>
+                                                <label for="inputPrice">Price</label>
+                                                <input type="text" class="form-control" id="inputPrice" name="inputPrice" placeholder="Enter price">
                                             </div>
                                         </div>
                                         <!-- /.card-body -->
 
                                         <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary" name="submit-product" value="clicked">Submit</button>
                                         </div>
                                     </form>
                                 </div>

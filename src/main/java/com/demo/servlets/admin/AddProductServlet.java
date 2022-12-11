@@ -16,30 +16,22 @@ public class AddProductServlet extends HttpServlet{
 
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/product/add_product.jsp";
-        //String index_message = "LOG IN";
-        HttpSession session = request.getSession();
-        try{
-            String name = request.getParameter("name");
-            int price = Integer.parseInt(request.getParameter("price"));
-            int quanity = Integer.parseInt(request.getParameter("quanity"));
-            String description = request.getParameter("description");
-            String details = request.getParameter("details");
-            Boolean status = true;
-            Boolean featured = true;
-            ProductModel.insertProduct(1, name, price, quanity, description, details, status, featured, 1);
-            //ProductEntity current_account = (ProductEntity) session.getAttribute("account");
-            //index_message = "Hello " + current_account.getFullname();
-        }
-        catch(Exception e){
-            //index_message = "LOG IN";
-        }
-        //request.setAttribute("indexmessage",index_message);
-        sc.getRequestDispatcher(url).
-                forward(request, response);
+
+        sc.getRequestDispatcher(url).forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/admin/admin_product/add_form_product.jsp").forward(request,response);
+        String action = request.getParameter("submit-product");
+
+        if (action.equals("clicked")) {
+            String name = request.getParameter("inputName");
+            String quantity = request.getParameter("inputQuantity");
+            String price = request.getParameter("inputPrice");
+
+            if (!name.equals("") && !quantity.equals("") && !price.equals("")) {
+                response.sendRedirect(request.getContextPath() + "/admin/product");
+            }
+        }
     }
 }

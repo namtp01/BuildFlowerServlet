@@ -1,5 +1,6 @@
 package com.demo.servlets.admin;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,11 +12,24 @@ import java.io.IOException;
 public class AddUserServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+        ServletContext sc = getServletContext();
+        String url = "/WEB-INF/views/admin/admin-user/add_form_user.jsp";
+
+        sc.getRequestDispatcher(url).forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("../WEB-INF/views/admin/admin-user/add_form_user.jsp").forward(request,response);
+
+        String action = request.getParameter("submit-user");
+
+        if (action.equals("clicked")) {
+            String username = request.getParameter("inputUsername");
+            String password = request.getParameter("inputPassword");
+
+            if (!username.equals("") && !password.equals("")) {
+                response.sendRedirect(request.getContextPath() + "/admin/user");
+            }
+        }
     }
 }
