@@ -1,5 +1,8 @@
 package com.demo.servlets.productdetail;
 
+import com.demo.entity.Product;
+import com.demo.models.ProductModel;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +19,10 @@ public class ProductDetailServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("id");
+        ProductModel productModel = new ProductModel();
+        Product p = productModel.getProductById(id);
+        request.setAttribute("detail", p);
         request.getRequestDispatcher("WEB-INF/views/productdetail/productdetail.jsp").forward(request,response);
     }
 

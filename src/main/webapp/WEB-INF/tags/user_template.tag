@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ tag language="java" pageEncoding="UTF-8" %>
 <%@ attribute name="title" required="true" type="java.lang.String" %>
 <%@ attribute name="content" fragment="true" %>
@@ -25,7 +26,7 @@
     <!-- responsive style -->
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.scss" rel="stylesheet" />
 
-    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.css.map.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/assets/user/dist/css/style.scss" rel="stylesheet" />
 
     <link href="${pageContext.request.contextPath}/assets/user/dist/css/responsive.css" rel="stylesheet" />
 </head>
@@ -38,23 +39,55 @@
         <div class="row">
             <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-white pr-3"  href="${pageContext.request.contextPath}/login">Login</a>
-                    <span class="text-white">|</span>
-                    <a class="text-white px-3" href="${pageContext.request.contextPath}/register">Register</a>
+                    <c:if test="${sessionScope.acc != null}">
+                        <a class="text-white pr-3"  href="${pageContext.request.contextPath}/profile">${sessionScope.acc.username}</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white pr-3"  href="${pageContext.request.contextPath}/logout">Logout</a>
+                    </c:if>
+                    <c:if test="${sessionScope.acc.roleId == 1}">
+                        <span class="text-white">|</span>
+                        <a class="text-white pr-3"  href="${pageContext.request.contextPath}/admin/dashboard">Dashboard</a>
+                    </c:if>
+
+                    <c:if test="${sessionScope.acc == null}">
+                        <a class="text-white pr-3"  href="${pageContext.request.contextPath}/login">Login</a>
+                        <span class="text-white">|</span>
+                        <a class="text-white px-3" href="${pageContext.request.contextPath}/register">Register</a>
+                    </c:if>
                 </div>
             </div>
             <div class="col-md-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
+                    <form action="search" class="form-inline d-inline-flex align-items-center">
+                        <div class="input-group input-group-sm align-items-center">
+                            <input class="form-control form-control-navbar" name="txt" type="text" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+<%--                        ml-3 px-3--%>
+<%--                        <a class="text-white px-3" href="">--%>
+<%--                            <i class="fas fa-search"></i>--%>
+<%--                        </a>--%>
+                        <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
+                            <i class="far fa-user"></i>
+                        </a>
+                        <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </form>
 
-                    <a class="text-white px-3" href="">
-                        <i class="fas fa-search"></i>
-                    </a>
-                    <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
-                        <i class="far fa-user"></i>
-                    </a>
-                    <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
+<%--                    <a class="text-white px-3" href="">--%>
+<%--                        <i class="fas fa-search"></i>--%>
+<%--                    </a>--%>
+<%--                    <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">--%>
+<%--                        <i class="far fa-user"></i>--%>
+<%--                    </a>--%>
+<%--                    <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">--%>
+<%--                        <i class="fas fa-shopping-cart"></i>--%>
+<%--                    </a>--%>
                 </div>
             </div>
         </div>
@@ -77,13 +110,9 @@
                     <div class="dropdown">
                     <a class="nav-item nav-link" href="${pageContext.request.contextPath}/product">Product</a>
                         <div class="dropdown-content">
-                            <a href="#">Congratulations Flowers</a>
-                            <a href="#">Wedding Flowers</a>
-                            <a href="#">Consolation Flowers</a>
-                            <a href="#">Bouquet</a>
-                            <a href="#">Basket of Flowers</a>
-                            <a href="#">Vase of Flowers</a>
-                            <a href="#">Accessories</a>
+                            <c:forEach items="${listC }" var="category">
+                                <a href="${pageContext.request.contextPath}/category?id=${category.id}">${category.name}</a>
+                            </c:forEach>
                         </div>
                     </div>
                     </div>
@@ -518,5 +547,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
 </script>
 <!-- End Google Map -->
+
 
 </html>

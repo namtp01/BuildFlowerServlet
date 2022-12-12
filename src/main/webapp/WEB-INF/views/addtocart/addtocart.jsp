@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <mt:contact_template title="Contact">
     <jsp:attribute name="content">
         <!-- Hero Section End -->
@@ -15,45 +16,23 @@
       <div class="card">
       <div class="row">
         <div class="col-md-8 cart">
-            <div class="row border-top border-bottom">
-                <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa9.png"></div>
-                    <div class="col">
-                        <div class="row text-muted">Flower</div>
-                        <div class="row">Cotton Flower</div>
+            <c:forEach var="item" items="${sessionScope.cart }">
+                <div class="row border-top border-bottom">
+                    <div class="row main align-items-center">
+                        <div class="col-2"><img class="img-fluid" src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa9.png"></div>
+                        <div class="col">
+                            <div class="row text-muted">${item.product.name }</div>
+                            <div class="row">Cotton Flower</div>
+                        </div>
+                        <div class="col">
+                            <b href="#">-</b><b href="#" class="border">1</b><b href="#">+</b>
+                        </div>
+                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
                     </div>
-                    <div class="col">
-                        <b href="#">-</b><b href="#" class="border">1</b><b href="#">+</b>
-                    </div>
-                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa11.png"></div>
-                    <div class="col">
-                        <div class="row text-muted">Flower</div>
-                        <div class="row">Cotton Flower</div>
-                    </div>
-                    <div class="col">
-                        <b href="#">-</b><b href="#" class="border">1</b><b href="#">+</b>
-                    </div>
-                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
-                </div>
-            </div>
-            <div class="row border-top border-bottom">
-                <div class="row main align-items-center">
-                    <div class="col-2"><img class="img-fluid" src="${pageContext.request.contextPath}/assets/user/dist/images/hoabo/hoaboa1.png"></div>
-                    <div class="col">
-                        <div class="row text-muted">Flower</div>
-                        <div class="row">Cotton Flower</div>
-                    </div>
-                    <div class="col">
-                        <b href="#">-</b><b href="#" class="border">1</b><b href="#">+</b>
-                    </div>
-                    <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
-                </div>
-            </div>
+            </c:forEach>
+
+
             <div class="back-to-shop"><a  href="${pageContext.request.contextPath}/home">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
         </div>
         <div class="col-md-4 summary">

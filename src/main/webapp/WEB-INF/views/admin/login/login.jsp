@@ -27,8 +27,8 @@
         <div class="form signinForm">
             <form  method="post">
                 <h3>Sign In</h3>
-                <input type="text" id="username" placeholder="User Name" name="username" required>
-                <input type="password" id="password" placeholder="Password" name="password" required>
+                <input type="text" id="username_admin" placeholder="User Name" name="username" required>
+                <input type="password" id="password_admin" placeholder="Password" name="password" required>
                 <input type="submit" value="Login">
 
                 <a href="#" class="forgot">Forgot Password?</a>

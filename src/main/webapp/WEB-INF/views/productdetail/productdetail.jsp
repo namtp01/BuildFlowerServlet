@@ -8,17 +8,17 @@
         <div class="col-lg-5 pb-5">
           <div id="product-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner border">
-              <div class="carousel-item active">
-                <img class="w-100 h-100"  src="${pageContext.request.contextPath}/assets/user/dist/images/binhhoa/binhhoa8.png" alt="Image">
-              </div>
-              <div class="carousel-item">
-                <img class="w-100 h-100"  src="${pageContext.request.contextPath}/assets/user/dist/images/binhhoa/binhhoa1.png" alt="Image">
-              </div>
-              <div class="carousel-item">
-                <img class="w-100 h-100"  src="${pageContext.request.contextPath}/assets/user/dist/images/binhhoa/binhhoa3.png" alt="Image">
-              </div>
-              <div class="carousel-item">
-                <img class="w-100 h-100"  src="${pageContext.request.contextPath}/assets/user/dist/images/binhhoa/binhhoa16.png" alt="Image">
+<%--              <div class="carousel-item active">--%>
+<%--                <img class="w-100 h-100"  src="${pageContext.request.contextPath}/assets/user/dist/images/binhhoa/binhhoa8.png" alt="Image">--%>
+<%--              </div>--%>
+<%--              <div class="carousel-item">--%>
+<%--                <img class="w-100 h-100"  src="${pageContext.request.contextPath}/assets/user/dist/images/binhhoa/binhhoa1.png" alt="Image">--%>
+<%--              </div>--%>
+<%--              <div class="carousel-item">--%>
+<%--                <img class="w-100 h-100"  src="${pageContext.request.contextPath}/assets/user/dist/images/binhhoa/binhhoa3.png" alt="Image">--%>
+<%--              </div>--%>
+              <div class="carousel-item active" >
+                <img class="w-100 h-100"  src="${detail.image}" alt="">
               </div>
             </div>
             <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
@@ -31,7 +31,7 @@
         </div>
 
         <div class="col-lg-7 pb-5">
-          <h8 class="font-weight-semi-bold">Colorful Stylish Shirt</h8>
+          <h8 class="font-weight-semi-bold">${detail.name}</h8>
           <div class="d-flex mb-3">
             <div class="text-primary mr-2">
               <small class="fas fa-star"></small>
@@ -42,8 +42,8 @@
             </div>
             <small class="pt-1">(50 Reviews)</small>
           </div>
-          <h7 class="font-weight-semi-bold mb-4">$150.00</h7>
-          <h7 class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</h7>
+          <h7 class="font-weight-semi-bold mb-4">${detail.price}</h7> <br>
+          <h7 class="mb-4">${detail.description}</h7>
           <div class="d-flex mb-3">
             <p class="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
             <form>
@@ -108,7 +108,7 @@
                 </button>
               </div>
             </div>
-            <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Add To Cart</button>
+            <button class="btn btn-primary px-3"><a href="${pageContext.request.contextPath}/addtocart?action=buy&id=${detail.id}"><i class="fa fa-shopping-cart mr-1"></i></a>Add To Cart</button>
           </div>
         </div>
       </div>
@@ -121,13 +121,10 @@
           </div>
           <div class="tab-content">
             <div class="tab-pane fade show active" id="tab-pane-1">
-              <h7 class="mb-3">Product Description</h7>
-              <h7>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</4>
-              <h7>Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</h7>
+              <h7 class="mb-3">${detail.description}</h7>
             </div>
             <div class="tab-pane fade" id="tab-pane-2">
-              <h7 class="mb-3">Additional Information</h7>
-              <h7>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</h7>
+              <h7 class="mb-3">${detail.details}</h7>
               <div class="row">
                 <div class="col-md-6">
                   <ul class="list-group list-group-flush">
