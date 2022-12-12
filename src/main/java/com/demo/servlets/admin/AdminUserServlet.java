@@ -22,17 +22,17 @@ public class AdminUserServlet extends HttpServlet {
         List<AccountEntity> users;
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/admin-user/admin_user.jsp";
-        //String index_message = "LOG IN";
         HttpSession session = request.getSession();
-        //try{
-        //      ProductEntity current_account = (ProductEntity) session.getAttribute("account");
-        //      index_message = "Hello " + current_account.getFullname();
-        //}
-        //catch(Exception e){
-        //      index_message = "LOG IN";
-        //}
+        String message;
+        try{
+            AccountEntity current_account = (AccountEntity) session.getAttribute("account");
+            message = "Hello " + current_account.getUsername();
+        }
+        catch(Exception e){
+            message = "LOG IN";
+        }
 
-        //request.setAttribute("indexmessage",index_message);
+        request.setAttribute("message", message);
         String id = request.getParameter("id");
 
         if (id != null) {

@@ -1,6 +1,7 @@
 package com.demo.servlets.admin;
 
 import com.demo.entities.ProductEntity;
+import com.demo.models.AccountModel;
 import com.demo.models.ProductModel;
 
 import javax.servlet.ServletContext;
@@ -24,7 +25,7 @@ public class ProductAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<ProductEntity> products = ProductModel.findAllProduct();
+        List<ProductEntity> products;
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/product/admin_product.jsp";
         //String index_message = "LOG IN";
@@ -36,20 +37,29 @@ public class ProductAdminServlet extends HttpServlet {
         //catch(Exception e){
         //      index_message = "LOG IN";
         //}
+
+        String id = request.getParameter("id");
+
+        if (id != null) {
+            ProductModel.deleteProduct(Integer.parseInt(id));
+        }
+
+        String search = request.getParameter("search-product-value");
+        String runSearch = request.getParameter("search-product");
+
+        if (runSearch != null) {
+            products = ProductModel.searchProducts(search);
+        } else {
+            products = ProductModel.findAllProduct();
+        }
         request.setAttribute("products", products);
         //request.setAttribute("indexmessage",index_message);
-        sc.getRequestDispatcher(url).
-                forward(request, response);
+        sc.getRequestDispatcher(url).forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("delete-product");
-        int id = Integer.parseInt(request.getParameter("id"));
-
-        if (!action.equals("")) {
-
-        }
+        doGet(request,response);
     }
 
 

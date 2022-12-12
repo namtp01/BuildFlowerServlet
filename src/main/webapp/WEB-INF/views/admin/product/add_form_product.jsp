@@ -34,7 +34,6 @@
                                     <h3 class="card-title">Add Product form</h3>
                                 </div>
                                 <!-- /.card-header -->
-                                <!-- form start -->
                                 <form method="post">
                                     <div class="card-body">
                                         <div class="form-group">

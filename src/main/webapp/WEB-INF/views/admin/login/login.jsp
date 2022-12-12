@@ -25,12 +25,11 @@
 
     <div class="formBx">
         <div class="form signinForm">
-            <form  method="post">
+            <form method="post">
                 <h3>Sign In</h3>
-                <input type="text" id="username" placeholder="User Name" name="username" required>
-                <input type="password" id="password" placeholder="Password" name="password" required>
-                <input type="submit" value="Login">
-
+                <input type="text" id="loginUsername" placeholder="User Name" name="loginUsername" required>
+                <input type="password" id="loginPassword" placeholder="Password" name="loginPassword" required>
+                <input type="submit" value="Login" name="login">
                 <a href="#" class="forgot">Forgot Password?</a>
             </form>
         </div>
@@ -38,10 +37,8 @@
         <div class="form signupForm">
             <form method="post">
                 <h3>Sign Up</h3>
-                <input type="text" id="name" placeholder="Full Name" name="name" required>
-                <input type="text" id="username" placeholder="User Name" name="username" required>
-                <input type="password" id="password" placeholder="Password" name="password" required>
-
+                <input type="text" id="registerName" placeholder="Full Name" name="registerName" required>
+                <input type="text" id="registerPassword" placeholder="User Name" name="registerPassword" required>
                 <input type="submit" value="Register">
             </form>
         </div>

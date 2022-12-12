@@ -109,4 +109,29 @@ public class AccountModel{
             em.close();
         }
     }
+
+    public static boolean loginAccount(String username, String password) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM AccountEntity b WHERE b.username = ?1 AND b.password = ?2";
+        trans.begin();
+        TypedQuery<AccountEntity> q = em.createQuery(qString, AccountEntity.class);
+        AccountEntity validated;
+        try {
+            q.setParameter(1, username);
+            q.setParameter(2, password);
+            validated = q.getSingleResult();
+        } catch (Exception e){
+            return false;
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        if (validated == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

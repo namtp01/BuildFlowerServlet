@@ -34,11 +34,11 @@
                     </div>
                     <div class="row card-header">
                         <div class="col-md-8 offset-md-2">
-                            <form action="#">
+                            <form method="post">
                                 <div class="input-group">
-                                    <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here">
+                                    <input type="search" class="form-control form-control-lg" placeholder="Type name of the products here" name="search-product-value">
                                     <div class="input-group-append">
-                                        <button type="submit" class="btn btn-lg btn-default">
+                                        <button type="submit" class="btn btn-lg btn-default" name="search-product">
                                             <i class="fa fa-search"></i>
                                         </button>
                                     </div>
@@ -68,11 +68,10 @@
                                 <td>${product.quantity}</td>
                                 <td>${product.description}</td>
                                 <td>
-                                    <form action="${pageContext.request.contextPath}/admin/edit_product?id=<c:out value='${product.id}'/>">
-                                        <input type="submit" class="btn btn-success" value="Edit"/>
-                                    </form>
-                                    <form method="post">
-                                        <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/product?id=<c:out value='${product.id}'/>" id="delete-product">Delete</a>
+                                    <form>
+                                        <a method="post" class="btn btn-success" href="${pageContext.request.contextPath}/admin/edit_product?id=<c:out value='${product.id}'/>" id="edit-product">Edit</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/product?id=<c:out value='${product.id}'/>" id="delete-user" name="delete-product">Delete</a>
                                     </form>
                                 </td>
                             </tr>

@@ -1,5 +1,6 @@
 package com.demo.models;
 
+import com.demo.entities.AccountEntity;
 import com.demo.entities.ProductEntity;
 import com.demo.utility.DBUtil;
 
@@ -15,6 +16,21 @@ public class ProductModel{
         trans.begin();
         em.persist(product);
         trans.commit();
+    }
+
+    public static void updateProduct(ProductEntity account) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        try {
+            em.merge(account);
+            trans.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
     }
 
     public static List<ProductEntity> findAllProduct() {
@@ -53,5 +69,42 @@ public class ProductModel{
             em.close();
         }
         return account;
+    }
+
+    public static List<ProductEntity> searchProducts(String name) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM ProductEntity b WHERE b.name = ?1";
+        trans.begin();
+        TypedQuery<ProductEntity> q = em.createQuery(qString, ProductEntity.class);
+        List<ProductEntity> searchList;
+        try {
+            q.setParameter(1, name);
+            searchList = q.getResultList();
+            if (searchList == null || searchList.isEmpty()) {
+                searchList= null;;
+            }
+
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        return searchList;
+    }
+
+    public static void deleteProduct(int id) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        try {
+            em.remove(em.find(AccountEntity.class, id));
+            trans.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
     }
 }
