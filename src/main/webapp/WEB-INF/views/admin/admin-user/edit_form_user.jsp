@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <mt:admin_template title="edit_user">
     <jsp:attribute name="content">
         <body class="hold-transition sidebar-mini">
@@ -38,14 +39,24 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="editUsername">Username</label>
-                                                <input type="email" class="form-control" id="editUsername" name="editUsername" placeholder="Enter email">
+                                                <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Enter username"
+                                                       value="<c:out value='${user.username}'/>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="editPassword">Password</label>
-                                                <input type="password" class="form-control" id="editPassword" name="editPassword" placeholder="Password">
+                                                <input type="text" class="form-control" id="editPassword" name="editPassword" placeholder="Enter password"
+                                                       value="<c:out value='${user.password}'/>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editRole">Select role:</label>
+                                                <br>
+                                                <br>
+                                                <select id="editRole" name="editRole">
+                                                    <option ${user.role=="Admin"?"selected":""} value="Admin">Admin</option>
+                                                    <option ${user.role=="User"?"selected":""} value="User">User</option>
+                                                </select>
                                             </div>
                                         </div>
-
                                         <div class="card-footer">
                                             <button type="submit" class="btn btn-primary" name="save-user" value="saved">Save</button>
                                         </div>

@@ -1,5 +1,8 @@
 package com.demo.servlets.admin;
 
+import com.demo.entities.AccountEntity;
+import com.demo.models.AccountModel;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,10 +29,16 @@ public class AddUserServlet extends HttpServlet{
         if (action.equals("clicked")) {
             String username = request.getParameter("inputUsername");
             String password = request.getParameter("inputPassword");
+            String role = request.getParameter("inputRole");
 
-            if (!username.equals("") && !password.equals("")) {
+            if (!username.equals("") && !password.equals("") && !role.equals("")) {
+                AccountModel.insertAccount(username, password, role);
                 response.sendRedirect(request.getContextPath() + "/admin/user");
+            } else {
+                response.sendRedirect(request.getContextPath() + "/admin/add_user");
             }
         }
+
+
     }
 }

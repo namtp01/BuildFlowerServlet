@@ -17,15 +17,12 @@ public class EditUserServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ServletContext sc = getServletContext();
-        String url = "/WEB-INF/views/admin/product/edit_form_user.jsp";
+        String url = "/WEB-INF/views/admin/admin-user/edit_form_user.jsp";
 
         int id = Integer.parseInt(request.getParameter("id"));
 
         AccountEntity account = AccountModel.findAccount(id);
-
-        request.setAttribute("editUsername", account.getUsername());
-        request.setAttribute("editPassword", account.getPassword());
-
+        request.setAttribute("user", account);
         sc.getRequestDispatcher(url).forward(request, response);
     }
 
@@ -34,10 +31,18 @@ public class EditUserServlet extends HttpServlet{
         String action = request.getParameter("save-user");
 
         if (action.equals("saved")) {
+            int id = Integer.parseInt(request.getParameter("id"));
             String username = request.getParameter("editUsername");
             String password = request.getParameter("editPassword");
+            String role = request.getParameter("editRole");
+            AccountEntity account = AccountModel.findAccount(id);
 
-            if (!username.equals("") && !password.equals("")) {
+            if (!username.equals("") && !password.equals("") && !role.equals("")) {
+                account.setUsername(username);
+                account.setPassword(password);
+                account.setRole(role);
+                AccountModel.updateAccount(account);
+
                 response.sendRedirect(request.getContextPath() + "/admin/user");
             }
         }

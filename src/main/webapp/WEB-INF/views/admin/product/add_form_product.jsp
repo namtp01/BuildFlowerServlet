@@ -50,8 +50,6 @@
                                             <input type="text" class="form-control" id="inputPrice" name="inputPrice" placeholder="Enter price">
                                         </div>
                                     </div>
-                                    <!-- /.card-body -->
-
                                     <div class="card-footer">
                                         <button type="submit" class="btn btn-primary" name="submit-product" value="clicked">Submit</button>
                                     </div>

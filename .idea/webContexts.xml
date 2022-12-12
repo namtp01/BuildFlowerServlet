@@ -7,6 +7,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/product_template.tag" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/user_template.tag" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about/about.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin-user/admin_user.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin-user" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/login" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product/product.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product" />
       </map>

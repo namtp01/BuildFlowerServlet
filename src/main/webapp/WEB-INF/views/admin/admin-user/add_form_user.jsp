@@ -43,10 +43,18 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPassword">Password</label>
-                                                <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter password">
+                                                <input type="text" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter password">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputRole">Role</label>
+                                                <br>
+                                                <br>
+                                                <select id="inputRole" name="inputRole">
+                                                    <option value="Admin">Admin</option>
+                                                    <option value="User">User</option>
+                                                </select>
                                             </div>
                                         </div>
-
                                         <div class="card-footer">
                                             <button type="submit" class="btn btn-primary" name="submit-user" value="clicked">Submit</button>
                                         </div>

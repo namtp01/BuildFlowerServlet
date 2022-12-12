@@ -19,7 +19,7 @@ public class AdminUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<AccountEntity> users = AccountModel.findAllAccount();
+        List<AccountEntity> users;
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/admin-user/admin_user.jsp";
         //String index_message = "LOG IN";
@@ -31,19 +31,28 @@ public class AdminUserServlet extends HttpServlet {
         //catch(Exception e){
         //      index_message = "LOG IN";
         //}
-        request.setAttribute("users", users);
+
         //request.setAttribute("indexmessage",index_message);
-        sc.getRequestDispatcher(url).
-                forward(request, response);
+        String id = request.getParameter("id");
+
+        if (id != null) {
+            AccountModel.deleteUser(Integer.parseInt(id));
+        }
+
+        String search = request.getParameter("search-user-value");
+        String runSearch = request.getParameter("search-user");
+
+        if (runSearch != null) {
+            users = AccountModel.searchAccounts(search);
+        } else {
+            users = AccountModel.findAllAccount();
+        }
+        request.setAttribute("users", users);
+        sc.getRequestDispatcher(url).forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("delete-user");
-        int id = Integer.parseInt(request.getParameter("id"));
-
-        if (!action.equals("")) {
-
-        }
+        doGet(request,response);
     }
 }

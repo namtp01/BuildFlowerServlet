@@ -14,23 +14,8 @@
         <property name="password">
             <column name="password" sql-type="varchar(250)" length="250"/>
         </property>
-        <property name="fullName">
-            <column name="full_name" sql-type="varchar(250)" length="250"/>
-        </property>
-        <property name="address">
-            <column name="address" sql-type="varchar(250)" length="250"/>
-        </property>
-        <property name="email">
-            <column name="email" sql-type="varchar(250)" length="250"/>
-        </property>
-        <property name="phone">
-            <column name="phone" sql-type="varchar(250)" length="250"/>
-        </property>
-        <property name="status">
-            <column name="status" sql-type="tinyint(1)"/>
-        </property>
-        <property name="roleId">
-            <column name="role_id" sql-type="int(1)"/>
+        <property name="role">
+            <column name="role" sql-type="varchar(250)" length="250"/>
         </property>
     </class>
 </hibernate-mapping>

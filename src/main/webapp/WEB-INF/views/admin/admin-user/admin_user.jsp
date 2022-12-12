@@ -38,11 +38,11 @@
                             </div>
                             <div class="row card-header">
                                 <div class="col-md-8 offset-md-2">
-                                    <form action="#">
+                                    <form method="post">
                                         <div class="input-group">
-                                            <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here">
+                                            <input type="search" class="form-control form-control-lg" placeholder="Type username here" name="search-user-value">
                                             <div class="input-group-append">
-                                                <button type="submit" class="btn btn-lg btn-default">
+                                                <button type="submit" class="btn btn-lg btn-default" name="search-user">
                                                     <i class="fa fa-search"></i>
                                                 </button>
                                             </div>
@@ -57,10 +57,7 @@
                                     <tr>
                                         <th>Username</th>
                                         <th>Password</th>
-                                        <th>Full name</th>
-                                        <th>Address</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Role</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -69,17 +66,12 @@
                                     <tr>
                                         <td>${user.username}</td>
                                         <td>${user.password}</td>
-                                        <td>${user.fullName}</td>
-                                        <td>${user.address}</td>
-                                        <td>${user.email}</td>
-                                        <td>${user.phone}</td>
+                                        <td>${user.role}</td>
                                         <td>
-                                            <form action="${pageContext.request.contextPath}/admin/edit_user?id=<c:out value='${user.id}'/>">
-                                                <input type="submit" class="btn btn-success" value="Edit"/>
-                                            </form>
+                                            <form>
+                                                <a method="post" class="btn btn-success" href="${pageContext.request.contextPath}/admin/edit_user?id=<c:out value='${user.id}'/>" id="edit-user">Edit</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <form method="post">
-                                                <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/user?id=<c:out value='${user.id}'/>" id="delete-user">Delete</a>
+                                                <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/user?id=<c:out value='${user.id}'/>" id="delete-user" name="delete-user">Delete</a>
                                             </form>
                                         </td>
                                     </tr>
@@ -88,10 +80,7 @@
                                     <tr>
                                         <th>Username</th>
                                         <th>Password</th>
-                                        <th>Full name</th>
-                                        <th>Address</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Role</th>
                                         <th>Action</th>
                                     </tr>
                                     </tfoot>

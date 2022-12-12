@@ -11,13 +11,28 @@ import java.util.List;
 
 
 public class AccountModel{
-    public static void insertAccount(int account_id, String username, String password, String full_name, String address, String email, String phone, byte status, int role_id) throws IOException {
+    public static void insertAccount(String username, String password, String role) throws IOException {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
-        AccountEntity account = new AccountEntity(account_id, username, password, full_name, address, email, phone, status, role_id);
+        AccountEntity account = new AccountEntity(username, password, role);
         trans.begin();
         em.persist(account);
         trans.commit();
+    }
+
+    public static void updateAccount(AccountEntity account) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
+        try {
+            em.merge(account);
+            trans.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+            trans.rollback();
+        } finally {
+            em.close();
+        }
     }
 
     public static List<AccountEntity> findAllAccount() {
@@ -56,6 +71,28 @@ public class AccountModel{
             em.close();
         }
         return account;
+    }
+
+    public static List<AccountEntity> searchAccounts(String username) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        String qString = "SELECT b FROM AccountEntity b WHERE b.username = ?1";
+        trans.begin();
+        TypedQuery<AccountEntity> q = em.createQuery(qString, AccountEntity.class);
+        List<AccountEntity> searchList;
+        try {
+            q.setParameter(1, username);
+            searchList = q.getResultList();
+            if (searchList == null || searchList.isEmpty()) {
+                searchList= null;;
+            }
+
+        }
+        finally {
+            em.close();
+        }
+        trans.commit();
+        return searchList;
     }
 
     public static void deleteUser(int id) {
