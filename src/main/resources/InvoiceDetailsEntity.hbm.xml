@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.demo.entities.InvoiceDetailsEntity" table="invoice_details" schema="heroku_8f21e8f014371d8">
+        <id name="id">
+            <column name="id"></column>
+        </id>
+        <property name="invoiceId">
+            <column name="invoice_id" sql-type="int(11)"/>
+        </property>
+        <property name="productId">
+            <column name="product_id" sql-type="int(11)"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="double" precision="-1"/>
+        </property>
+        <property name="quantity">
+            <column name="quantity" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>
