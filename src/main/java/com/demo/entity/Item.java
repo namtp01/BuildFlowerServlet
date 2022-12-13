@@ -1,6 +1,9 @@
 package com.demo.entity;
 
 public class Item {
+
+    private int id;
+    private double price;
     private Product product;
     private int quantity;
 
@@ -25,5 +28,21 @@ public class Item {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
