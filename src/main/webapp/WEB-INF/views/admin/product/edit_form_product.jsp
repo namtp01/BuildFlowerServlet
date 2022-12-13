@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <mt:admin_template title="edit_product">
     <jsp:attribute name="content">
         <body class="hold-transition sidebar-mini">
@@ -37,24 +38,35 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label for="editName">Name</label>
-                                                <input type="text" class="form-control" id="editName" name="editName" placeholder="Enter username">
+                                                <input type="text" class="form-control" id="editName" name="editName" placeholder="Enter name"
+                                                       value="<c:out value='${product.name}'/>">
                                             </div>
                                             <div class="form-group">
                                                 <label for="editQuantity">Quantity</label>
-                                                <input type="number" class="form-control" id="editQuantity" name="editQuantity" placeholder="Enter quantity">
+                                                <input type="number" class="form-control" id="editQuantity" name="editQuantity" placeholder="Enter quantity"
+                                                       value="<c:out value='${product.quantity}'/>">
                                             </div>
                                             <div class="form-group">
-                                                <label for="editPrice">Price</label>
-                                                <input type="text" class="form-control" id="editPrice" name="editPrice" placeholder="Enter price">
+                                                <label for="editDescription">Description</label>
+                                                <input type="text" class="form-control" id="editDescription" name="editDescription" placeholder="Enter Description"
+                                                       value="<c:out value='${product.description}'/>">
                                             </div>
-
-                                            <div class="card-footer">
-                                                <button type="submit" class="btn btn-primary" name="save-product" value="saved">Submit</button>
+                                            <div class="form-group">
+                                                <label for="editDetails">Details</label>
+                                                <input type="text" class="form-control" id="editDetails" name="editDetails" placeholder="Enter Details"
+                                                       value="<c:out value='${product.details}'/>">
                                             </div>
+                                            <div class="form-group">
+                                                <label for="editImage">Image</label>
+                                                <input type="text" class="form-control" id="editImage" name="editImage" placeholder="Enter link image"
+                                                       value="<c:out value='${product.image}'/>">
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="submit" class="btn btn-primary" name="submit-product" value="clicked">Submit</button>
                                         </div>
                                     </form>
                                 </div>
-                                <!-- /.card -->
                         </div>
                         <!-- /.row -->
                     </div><!-- /.container-fluid -->

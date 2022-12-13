@@ -1,27 +1,19 @@
 package com.demo.servlets.admin;
 
 import com.demo.entity.Account;
-import com.demo.entity.Product;
-import com.demo.models.ProductModel;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "EditProductServlet", value = "/admin/edit_product")
-public class EditProductServlet extends HttpServlet{
+@WebServlet(name = "AddCategoryServlet", value = "/admin/add_category")
+public class AddCategoryServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         ServletContext sc = getServletContext();
-        String url = "/WEB-INF/views/admin/product/edit_form_product.jsp";
-        ProductModel productModel = new ProductModel();
-
+        String url = "/WEB-INF/views/admin/category/add.jsp";
         HttpSession session = request.getSession();
         String message = "";
         try{
@@ -33,23 +25,17 @@ public class EditProductServlet extends HttpServlet{
         }
         request.setAttribute("message", message);
 
-        int id = Integer.parseInt(request.getParameter("id"));
-
-        Product product = productModel.findProduct(id);
-
-        request.setAttribute("product", product);
-
         sc.getRequestDispatcher(url).forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("save-product");
+        String action = request.getParameter("submit-category");
 
-        if (action.equals("saved")) {
-            String name = request.getParameter("editName");
-            String quantity = request.getParameter("editQuantity");
-            String price = request.getParameter("editPrice");
+        if (action.equals("clicked")) {
+            String name = request.getParameter("inputName");
+            String quantity = request.getParameter("inputQuantity");
+            String price = request.getParameter("inputPrice");
 
             if (!name.equals("") && !quantity.equals("") && !price.equals("")) {
                 response.sendRedirect(request.getContextPath() + "/admin/product");

@@ -38,22 +38,12 @@
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" id="name" name="name" required="required">
                                 </div>
-
-                                <div class="form-check">
-                                    <input type="checkbox" name="status" class="form-check-input" id="status">
-                                    <label class="form-check-label" for="status">Status</label>
-                                </div>
                             </div>
-                            <!-- /.card-body -->
-
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary" name="submit-category" value="clicked">Submit</button>
                             </div>
                         </form>
                     </div>
-                    <!-- /.card -->
-
-
                 </div>
 
             </div>

@@ -22,7 +22,7 @@ public class CategoryAdminServlet extends HttpServlet {
         List<Category> categories;
         CategoryModel categoryModel = new CategoryModel();
         ServletContext sc = getServletContext();
-        String url = "/WEB-INF/views/admin/product/admin_product.jsp";
+        String url = "/WEB-INF/views/admin/category/category.jsp";
         HttpSession session = request.getSession();
         String message = "";
         try{
@@ -40,15 +40,15 @@ public class CategoryAdminServlet extends HttpServlet {
             categoryModel.deleteCategory(id);
         }
 
-        String search = request.getParameter("search-product-value");
-        String runSearch = request.getParameter("search-user");
+        String search = request.getParameter("search-category-value");
+        String runSearch = request.getParameter("search-category");
 
         if (runSearch != null) {
             categories = categoryModel.searchCategoryByName(search);
         } else {
             categories = categoryModel.getAllCategory();
         }
-        request.setAttribute("products", categories);
+        request.setAttribute("categories", categories);
         sc.getRequestDispatcher(url).forward(request, response);
     }
 

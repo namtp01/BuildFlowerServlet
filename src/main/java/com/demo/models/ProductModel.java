@@ -128,7 +128,7 @@ public class ProductModel {
             conn = new DBConnection().getConnection();
             ps = conn.prepareStatement(query);
             ps.setInt(1, id);
-            ps.executeQuery();
+            rs = ps.executeQuery();
             while (rs.next()) {
                 return (new Product(rs.getInt(1),
                         rs.getString(2),

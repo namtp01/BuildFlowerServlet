@@ -32,7 +32,7 @@ public class ProductAdminServlet extends HttpServlet {
             message = "Hello " + current_account.getFull_name();
         }
         catch(Exception e){
-            sc.getRequestDispatcher("/WEB-INF/views/product/admin_product.jsp").forward(request,response);
+            url = "/WEB-INF/views/admin/login/login.jsp";
         }
         request.setAttribute("message", message);
 
@@ -43,7 +43,7 @@ public class ProductAdminServlet extends HttpServlet {
         }
 
         String search = request.getParameter("search-product-value");
-        String runSearch = request.getParameter("search-user");
+        String runSearch = request.getParameter("search-product");
 
         if (runSearch != null) {
             products = productModel.searchProductByName(search);
