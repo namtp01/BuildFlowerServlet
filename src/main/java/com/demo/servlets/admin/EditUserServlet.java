@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "EditUserServlet", value = "/admin/edit_user")
@@ -19,6 +20,17 @@ public class EditUserServlet extends HttpServlet{
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/admin-user/edit_form_user.jsp";
         AccountModel accountModel = new AccountModel();
+
+        HttpSession session = request.getSession();
+        String message = "";
+        try{
+            Account current_account = (Account) session.getAttribute("account");
+            message = "Hello " + current_account.getFull_name();
+        }
+        catch(Exception e){
+            url = "/WEB-INF/views/admin/login/login.jsp";
+        }
+        request.setAttribute("message", message);
 
         int id = Integer.parseInt(request.getParameter("id"));
 

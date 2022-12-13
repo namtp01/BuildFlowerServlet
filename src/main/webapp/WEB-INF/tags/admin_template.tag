@@ -51,18 +51,6 @@
                 <a href="#" class="nav-link">Contact</a>
             </li>
         </ul>
-
-        <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
-            <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-navbar" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
     </nav>
     <!-- /.navbar -->
 
@@ -83,7 +71,7 @@
                     <img src="${pageContext.request.contextPath}/assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="${pageContext.request.contextPath}/admin/login?action=profile" class="d-block">${sessionScope.username_admin}</a>
+                    <a href="${pageContext.request.contextPath}/admin/login?action=profile" class="d-block">${message}</a>
                     <br>
                     <a href="${pageContext.request.contextPath}/admin/login?action=logout" class="d-block">Logout</a>
                 </div>
@@ -92,8 +80,6 @@
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                    <!-- Add icons to the links using the .nav-icon class
-                         with font-awesome or any other icon font library -->
                     <li class="nav-item has-treeview menu-open">
                         <a href="${pageContext.request.contextPath}/admin/dashboard" class="nav-link active">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -110,60 +96,21 @@
                             </p>
                         </a>
                     </li>
-                    <%--                    <li class="nav-item has-treeview">--%>
-                    <%--                        <a href="${pageContext.request.contextPath}/admin/product" class="nav-link">--%>
-                    <%--                            <i class="nav-icon fas fa-edit"></i>--%>
-                    <%--                            <p>--%>
-                    <%--                                Product--%>
-                    <%--                            </p>--%>
-                    <%--                        </a>--%>
-                    <%--                    </li>--%>
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
+                        <a href="${pageContext.request.contextPath}/admin/category" class="nav-link">
+                            <i class="nav-icon fas fa-award"></i>
                             <p>
                                 Category
-                                <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="${pageContext.request.contextPath}/admin/category?action=add" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Add</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="${pageContext.request.contextPath}/admin/category" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>List</p>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
-
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-edit"></i>
+                        <a href="${pageContext.request.contextPath}/admin/product" class="nav-link">
+                            <i class="nav-icon fas fa-beer"></i>
                             <p>
                                 Product
-                                <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="${pageContext.request.contextPath}/admin/product?action=add" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Add</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="${pageContext.request.contextPath}/admin/product" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>List</p>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -175,7 +122,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
 
-        <jsp:invoke fragment="content"></jsp:invoke>
+        <jsp:invoke fragment="content"/>
 
     </div>
     <!-- /.content-wrapper -->

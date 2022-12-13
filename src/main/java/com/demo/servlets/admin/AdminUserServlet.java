@@ -24,16 +24,16 @@ public class AdminUserServlet extends HttpServlet {
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/admin-user/admin_user.jsp";
         HttpSession session = request.getSession();
-        String message;
+        String message = "";
         try{
             Account current_account = (Account) session.getAttribute("account");
-            message = "Hello " + current_account.getUsername();
+            message = "Hello " + current_account.getFull_name();
         }
         catch(Exception e){
-            message = "LOG IN";
+            url = "/WEB-INF/views/admin/login/login.jsp";
         }
-
         request.setAttribute("message", message);
+
         String id = request.getParameter("id");
 
         if (id != null) {

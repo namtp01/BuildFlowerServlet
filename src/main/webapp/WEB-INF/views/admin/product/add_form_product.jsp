@@ -45,8 +45,16 @@
                                             <input type="number" class="form-control" id="inputQuantity" name="inputQuantity" placeholder="Enter quantity">
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputPrice">Price</label>
-                                            <input type="text" class="form-control" id="inputPrice" name="inputPrice" placeholder="Enter price">
+                                            <label for="inputDescription">Description</label>
+                                            <input type="text" class="form-control" id="inputDescription" name="inputDescription" placeholder="Enter Description">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputDetails">Details</label>
+                                            <input type="text" class="form-control" id="inputDetails" name="inputDetails" placeholder="Enter Details">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputImage">Image</label>
+                                            <input type="text" class="form-control" id="inputImage" name="inputImage" placeholder="Enter link image">
                                         </div>
                                     </div>
                                     <div class="card-footer">

@@ -27,40 +27,15 @@
         <div class="form signinForm">
             <form  method="post">
                 <h3>Sign In</h3>
-                <input type="text" id="username_admin" placeholder="User Name" name="username" required>
-                <input type="password" id="password_admin" placeholder="Password" name="password" required>
-                <input type="submit" value="Login">
+                <input type="text" id="loginUsername" placeholder="User Name" name="loginUsername" required>
+                <input type="password" id="loginPassword" placeholder="Password" name="loginPassword" required>
+                <input type="submit" id="Login" name="Login" value="Login">
 
                 <a href="#" class="forgot">Forgot Password?</a>
-            </form>
-        </div>
-
-        <div class="form signupForm">
-            <form method="post">
-                <h3>Sign Up</h3>
-                <input type="text" id="name" placeholder="Full Name" name="name" required>
-                <input type="text" id="username" placeholder="User Name" name="username" required>
-                <input type="password" id="password" placeholder="Password" name="password" required>
-
-                <input type="submit" value="Register">
             </form>
         </div>
     </div>
 
 </div>
-<script>
-    const signinBtn = document.querySelector('.signinBtn');
-    const signupBtn = document.querySelector('.signupBtn');
-    const formBx = document.querySelector('.formBx');
-    const body = document.querySelector('body');
-    signupBtn.onclick = function(){
-        formBx.classList.add('active')
-        body.classList.add('active')
-    };
-    signinBtn.onclick = function(){
-        formBx.classList.remove('active')
-        body.classList.remove('active')
-    };
-</script>
 </body>
 </html>

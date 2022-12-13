@@ -1,5 +1,7 @@
 package com.demo.servlets.admin;
 
+import com.demo.entity.Account;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -12,6 +14,16 @@ public class AddProductServlet extends HttpServlet{
 
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/product/add_form_product.jsp";
+        HttpSession session = request.getSession();
+        String message = "";
+        try{
+            Account current_account = (Account) session.getAttribute("account");
+            message = "Hello " + current_account.getFull_name();
+        }
+        catch(Exception e){
+            url = "/WEB-INF/views/admin/login/login.jsp";
+        }
+        request.setAttribute("message", message);
 
         sc.getRequestDispatcher(url).forward(request, response);
     }

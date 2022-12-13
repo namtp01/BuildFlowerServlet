@@ -1,5 +1,6 @@
 package com.demo.servlets.admin;
 
+import com.demo.entity.Account;
 import com.demo.models.AccountModel;
 
 import javax.servlet.ServletContext;
@@ -8,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "AddUserServlet", value = "/admin/add_user")
@@ -16,6 +18,16 @@ public class AddUserServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/admin-user/add_form_user.jsp";
+        HttpSession session = request.getSession();
+        String message = "";
+        try{
+            Account current_account = (Account) session.getAttribute("account");
+            message = "Hello " + current_account.getFull_name();
+        }
+        catch(Exception e){
+            url = "/WEB-INF/views/admin/login/login.jsp";
+        }
+        request.setAttribute("message", message);
 
         sc.getRequestDispatcher(url).forward(request, response);
     }

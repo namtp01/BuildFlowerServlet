@@ -19,7 +19,7 @@ public class LoginAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("login");
+        String action = request.getParameter("Login");
         HttpSession session = request.getSession();
         String message;
         AccountModel accountModel = new AccountModel();
@@ -29,10 +29,11 @@ public class LoginAdminServlet extends HttpServlet {
             String password = request.getParameter("loginPassword");
 
             if(!username.equals("") && !password.equals("")) {
-                Account validated = accountModel.login(username, password);
+                Account validated = accountModel.loginForAdmin(username, password);
                 if(validated != null) {
                     message = "Hello " + username;
                     session.setAttribute("message" , message);
+                    session.setAttribute("account" , validated);
                     response.sendRedirect(request.getContextPath() + "/admin/dashboard");
                 } else {
                     response.sendRedirect(request.getContextPath() + "/admin/login");

@@ -42,7 +42,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach var="product" items="${listP }">
+                            <c:forEach var="product" items="${products }">
                                 <tr>
                                     <td>${product.id }</td>
                                     <td>${product.name }</td>

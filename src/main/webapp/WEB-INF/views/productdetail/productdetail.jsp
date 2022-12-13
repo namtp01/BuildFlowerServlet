@@ -108,7 +108,9 @@
                 </button>
               </div>
             </div>
-            <button class="btn btn-primary px-3"><a href="${pageContext.request.contextPath}/addtocart?action=buy&id=${detail.id}"><i class="fa fa-shopping-cart mr-1"></i></a>Add To Cart</button>
+            <a class="btn btn-primary px-3" href="${pageContext.request.contextPath}/addtocart?action=buy&id=${detail.id}">
+              <i class="fa fa-shopping-cart mr-1">Add To Cart</i>
+            </a>
           </div>
         </div>
       </div>

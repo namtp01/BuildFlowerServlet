@@ -31,7 +31,7 @@
                       <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                                <h3 class="card-title">Information of all accounts</h3>
                                 <form action="${pageContext.request.contextPath}/admin/add_user">
                                     <input type="submit" class="btn btn-primary float-right" value="Add user"/>
                                 </form>
@@ -50,9 +50,8 @@
                                     </form>
                                 </div>
                             </div>
-                            <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="user-table" class="table table-bordered table-striped">
+                                <table id="example2" class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
                                         <th>Username</th>

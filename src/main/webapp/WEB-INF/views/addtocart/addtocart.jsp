@@ -52,13 +52,12 @@
                 <div class="col">TOTAL PRICE</div>
                 <div class="col text-right">&euro; 137.00</div>
             </div>
-            <button class="btn">CHECKOUT</button>
+            <a method="post" class="btn" href="${pageContext.request.contextPath}/authorize_payment">CHECKOUT</a>
         </div>
     </div>
 
    </div>
   </section>
-  <!-- end contact section -->
 
     </jsp:attribute>
 </mt:contact_template>

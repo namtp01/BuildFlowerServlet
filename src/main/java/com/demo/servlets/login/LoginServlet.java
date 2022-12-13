@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         AccountModel accountModel = new AccountModel();
-        Account account = accountModel.login(username,password);
+        Account account = accountModel.loginForAdmin(username,password);
         if (account == null) {
             request.setAttribute("mess", "Wrong username or password");
             request.getRequestDispatcher("WEB-INF/views/login/login.jsp").forward(request,response);

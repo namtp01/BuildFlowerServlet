@@ -15,13 +15,40 @@ public class AccountModel {
     PreparedStatement ps = null;
     ResultSet rs = null;
 
-    public Account login(String username, String password) {
-        String query = "select * from account where username = ? and password = ?";
+    public Account loginForAdmin(String username, String password) {
+        String query = "select * from account where username = ? and password = ? and role = ?";
         try {
             conn = new DBConnection().getConnection();
             ps = conn.prepareStatement(query);
             ps.setString(1, username);
             ps.setString(2, password);
+            ps.setString(3, "Admin");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return (new Account(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8)));
+            }
+        } catch (Exception e){
+
+        }
+
+        return null;
+    }
+
+    public Account loginForUser(String username, String password) {
+        String query = "select * from account where username = ? and password = ? and role = ?";
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ps.setString(3, "User");
             rs = ps.executeQuery();
             while (rs.next()) {
                 return (new Account(rs.getInt(1),

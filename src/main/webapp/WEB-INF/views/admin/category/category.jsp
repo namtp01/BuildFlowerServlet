@@ -43,9 +43,12 @@
                                     <td>${category.id }</td>
                                     <td>${category.name }</td>
                                     <td>${category.status ? "Show" : "Hide" }</td>
-                                    <td><a href="${pageContext.request.contextPath}/admin/category?action=edit&id=${category.id }">Edit</a>
-                                        |
-                                        <a href="${pageContext.request.contextPath}/admin/category?action=delete&id=${category.id }" onclick="return confirm('Do you want to delete ?')">Delete</a>
+                                    <td>
+                                        <form>
+                                            <a method="post" class="btn btn-success" href="${pageContext.request.contextPath}/admin/edit_catergory?id=<c:out value='${category.id}'/>" id="edit-category">Edit</a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/category?id=<c:out value='${category.id}'/>" id="delete-user" name="delete-category">Delete</a>
+                                        </form>
                                     </td>
                                 </tr>
                             </c:forEach>
