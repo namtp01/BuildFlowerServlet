@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <mt:admin_template title="admin-user">
     <jsp:attribute name="content">
         <!-- Navbar -->
@@ -57,6 +57,10 @@
                                     <tr>
                                         <th>Username</th>
                                         <th>Password</th>
+                                        <th>Full name</th>
+                                        <th>Address</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
                                         <th>Role</th>
                                         <th>Action</th>
                                     </tr>
@@ -66,6 +70,10 @@
                                     <tr>
                                         <td>${user.username}</td>
                                         <td>${user.password}</td>
+                                        <td>${user.full_name}</td>
+                                        <td>${user.address}</td>
+                                        <td>${user.email}</td>
+                                        <td>${user.phone}</td>
                                         <td>${user.role}</td>
                                         <td>
                                             <form>
@@ -80,6 +88,10 @@
                                     <tr>
                                         <th>Username</th>
                                         <th>Password</th>
+                                        <th>Full name</th>
+                                        <th>Address</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
                                         <th>Role</th>
                                         <th>Action</th>
                                     </tr>

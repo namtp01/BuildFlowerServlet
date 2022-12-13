@@ -1,6 +1,5 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.AccountEntity;
 import com.demo.models.AccountModel;
 
 import javax.servlet.ServletContext;
@@ -25,20 +24,24 @@ public class AddUserServlet extends HttpServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String action = request.getParameter("submit-user");
+        AccountModel accountModel = new AccountModel();
 
         if (action.equals("clicked")) {
             String username = request.getParameter("inputUsername");
             String password = request.getParameter("inputPassword");
+            String full_name = request.getParameter("inputFullName");
+            String address = request.getParameter("inputAddress");
+            String email = request.getParameter("inputEmail");
+            String phone = request.getParameter("inputPhone");
             String role = request.getParameter("inputRole");
 
             if (!username.equals("") && !password.equals("") && !role.equals("")) {
-                AccountModel.insertAccount(username, password, role);
+                accountModel.insertAccount(username, password, full_name, address, email, phone, role);
                 response.sendRedirect(request.getContextPath() + "/admin/user");
             } else {
                 response.sendRedirect(request.getContextPath() + "/admin/add_user");
             }
         }
-
 
     }
 }

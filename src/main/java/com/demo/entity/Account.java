@@ -8,12 +8,11 @@ public class Account {
     private String address;
     private String email;
     private String phone;
-    private Boolean status;
-    private int roleId;
+    private String role;
 
     public Account(){}
 
-    public Account(int id, String username, String password, String full_name, String address,String email, String phone, Boolean status, int roleId) {
+    public Account(int id, String username, String password, String full_name, String address,String email, String phone, String role) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -21,8 +20,7 @@ public class Account {
         this.address = address;
         this.email = email;
         this.phone = phone;
-        this.status = status;
-        this.roleId = roleId;
+        this.role = role;
     }
 
     public int getId() {
@@ -81,20 +79,12 @@ public class Account {
         this.phone = phone;
     }
 
-    public Boolean getStatus() {
-        return status;
+    public String getRole() {
+        return role;
     }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
@@ -106,8 +96,7 @@ public class Account {
                 ", full_name='" + full_name + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
-                ", status=" + status +
-                ", roleId=" + roleId +
+                ", roleId=" + role +
                 '}';
     }
 }

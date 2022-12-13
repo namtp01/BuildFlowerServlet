@@ -1,6 +1,6 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.AccountEntity;
+import com.demo.entity.Account;
 import com.demo.models.AccountModel;
 
 import javax.servlet.*;
@@ -22,14 +22,15 @@ public class LoginAdminServlet extends HttpServlet {
         String action = request.getParameter("login");
         HttpSession session = request.getSession();
         String message;
+        AccountModel accountModel = new AccountModel();
 
         if (action.equals("Login")) {
             String username = request.getParameter("loginUsername");
             String password = request.getParameter("loginPassword");
 
             if(!username.equals("") && !password.equals("")) {
-                Boolean validated = AccountModel.loginAccount(username, password);
-                if(validated) {
+                Account validated = accountModel.login(username, password);
+                if(validated != null) {
                     message = "Hello " + username;
                     session.setAttribute("message" , message);
                     response.sendRedirect(request.getContextPath() + "/admin/dashboard");

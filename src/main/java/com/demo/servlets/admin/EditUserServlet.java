@@ -1,6 +1,6 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.AccountEntity;
+import com.demo.entity.Account;
 import com.demo.models.AccountModel;
 
 import javax.servlet.ServletContext;
@@ -18,10 +18,11 @@ public class EditUserServlet extends HttpServlet{
 
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/admin-user/edit_form_user.jsp";
+        AccountModel accountModel = new AccountModel();
 
         int id = Integer.parseInt(request.getParameter("id"));
 
-        AccountEntity account = AccountModel.findAccount(id);
+        Account account = accountModel.findAccount(id);
         request.setAttribute("user", account);
         sc.getRequestDispatcher(url).forward(request, response);
     }
@@ -29,19 +30,20 @@ public class EditUserServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("save-user");
+        AccountModel accountModel = new AccountModel();
 
         if (action.equals("saved")) {
             int id = Integer.parseInt(request.getParameter("id"));
             String username = request.getParameter("editUsername");
             String password = request.getParameter("editPassword");
             String role = request.getParameter("editRole");
-            AccountEntity account = AccountModel.findAccount(id);
+            Account account = accountModel.findAccount(id);
 
             if (!username.equals("") && !password.equals("") && !role.equals("")) {
                 account.setUsername(username);
                 account.setPassword(password);
                 account.setRole(role);
-                AccountModel.updateAccount(account);
+                accountModel.updateAccount(account);
 
                 response.sendRedirect(request.getContextPath() + "/admin/user");
             }

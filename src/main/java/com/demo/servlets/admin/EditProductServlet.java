@@ -1,6 +1,6 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.ProductEntity;
+import com.demo.entity.Product;
 import com.demo.models.ProductModel;
 
 import javax.servlet.ServletContext;
@@ -18,10 +18,11 @@ public class EditProductServlet extends HttpServlet{
 
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/product/edit_form_product.jsp";
+        ProductModel productModel = new ProductModel();
 
         int id = Integer.parseInt(request.getParameter("id"));
 
-        ProductEntity product = ProductModel.findProduct(id);
+        Product product = productModel.findProduct(id);
 
         request.setAttribute("editName", product.getName());
         request.setAttribute("editQuantity", product.getQuantity());

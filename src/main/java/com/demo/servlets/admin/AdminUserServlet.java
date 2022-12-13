@@ -1,6 +1,6 @@
 package com.demo.servlets.admin;
 
-import com.demo.entities.AccountEntity;
+import com.demo.entity.Account;
 import com.demo.models.AccountModel;
 
 import javax.servlet.*;
@@ -19,13 +19,14 @@ public class AdminUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<AccountEntity> users;
+        List<Account> users;
+        AccountModel accountModel = new AccountModel();
         ServletContext sc = getServletContext();
         String url = "/WEB-INF/views/admin/admin-user/admin_user.jsp";
         HttpSession session = request.getSession();
         String message;
         try{
-            AccountEntity current_account = (AccountEntity) session.getAttribute("account");
+            Account current_account = (Account) session.getAttribute("account");
             message = "Hello " + current_account.getUsername();
         }
         catch(Exception e){
@@ -36,16 +37,16 @@ public class AdminUserServlet extends HttpServlet {
         String id = request.getParameter("id");
 
         if (id != null) {
-            AccountModel.deleteUser(Integer.parseInt(id));
+            accountModel.deleteAccount(id);
         }
 
         String search = request.getParameter("search-user-value");
         String runSearch = request.getParameter("search-user");
 
         if (runSearch != null) {
-            users = AccountModel.searchAccounts(search);
+            users = accountModel.searchAccount(search);
         } else {
-            users = AccountModel.findAllAccount();
+            users = accountModel.findAllAccount();
         }
         request.setAttribute("users", users);
         sc.getRequestDispatcher(url).forward(request, response);

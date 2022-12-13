@@ -1,6 +1,7 @@
 package com.demo.models;
 
 import com.demo.DBConnection.DBConnection;
+import com.demo.entity.Account;
 import com.demo.entity.Item;
 import com.demo.entity.Product;
 
@@ -142,6 +143,29 @@ public class ProductModel {
         }
 
         return -1;
+    }
+
+    public Product findProduct(int id) {
+        String query = "SELECT * FROM product WHERE id = ?";
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            ps.executeQuery();
+            while (rs.next()) {
+                return (new Product(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getDouble(3),
+                        rs.getInt(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getBoolean(8)));
+            }
+        } catch (Exception e) {
+
+        }
+        return null;
     }
 //    public static void main(String[] args) {
 //        ProductModel dao = new ProductModel();

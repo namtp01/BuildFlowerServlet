@@ -46,8 +46,23 @@
                                                 <input type="text" class="form-control" id="inputPassword" name="inputPassword" placeholder="Enter password">
                                             </div>
                                             <div class="form-group">
+                                                <label for="inputFullName">Full name</label>
+                                                <input type="text" class="form-control" id="inputFullName" name="inputFullName" placeholder="Enter name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputAddress">Address</label>
+                                                <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="Enter address">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail">Email</label>
+                                                <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPhone">Phone number</label>
+                                                <input type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="Enter phone numbers">
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="inputRole">Role</label>
-                                                <br>
                                                 <br>
                                                 <select id="inputRole" name="inputRole">
                                                     <option value="Admin">Admin</option>

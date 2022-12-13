@@ -48,8 +48,27 @@
                                                        value="<c:out value='${user.password}'/>">
                                             </div>
                                             <div class="form-group">
+                                                <label for="editFullName">Full name</label>
+                                                <input type="text" class="form-control" id="editFullName" name="editFullName" placeholder="Enter name"
+                                                       value="<c:out value='${user.full_name}'/>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editAddress">Address</label>
+                                                <input type="text" class="form-control" id="editAddress" name="editAddress" placeholder="Enter address"
+                                                       value="<c:out value='${user.address}'/>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editEmail">Email</label>
+                                                <input type="text" class="form-control" id="editEmail" name="editEmail" placeholder="Enter email"
+                                                       value="<c:out value='${user.email}'/>">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editPhone">Phone number</label>
+                                                <input type="text" class="form-control" id="editPhone" name="editPhone" placeholder="Enter phone numbers"
+                                                       value="<c:out value='${user.phone}'/>">
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="editRole">Select role:</label>
-                                                <br>
                                                 <br>
                                                 <select id="editRole" name="editRole">
                                                     <option ${user.role=="Admin"?"selected":""} value="Admin">Admin</option>
