@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@taglib prefix="mt" tagdir="/WEB-INF/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<mt:admin_template title="edit_user">
+<mt:admin_template title="edit_product">
     <jsp:attribute name="content">
         <body class="hold-transition sidebar-mini">
         <div class="wrapper">
@@ -12,12 +11,12 @@
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1>Edit User</h1>
+                                <h1>Edit Product</h1>
                             </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active">Edit User</li>
+                                    <li class="breadcrumb-item active">Edit Product</li>
                                 </ol>
                             </div>
                         </div>
@@ -32,33 +31,26 @@
                                 <!-- general form elements -->
                                 <div class="card card-primary">
                                     <div class="card-header">
-                                        <h3 class="card-title">Edit User form</h3>
+                                        <h3 class="card-title">Edit Product form</h3>
                                     </div>
-                                    <!-- /.card-header -->
                                     <form method="post">
                                         <div class="card-body">
                                             <div class="form-group">
-                                                <label for="editUsername">Username</label>
-                                                <input type="text" class="form-control" id="editUsername" name="editUsername" placeholder="Enter username"
-                                                       value="<c:out value='${user.username}'/>">
+                                                <label for="editName">Name</label>
+                                                <input type="text" class="form-control" id="editName" name="editName" placeholder="Enter username">
                                             </div>
                                             <div class="form-group">
-                                                <label for="editPassword">Password</label>
-                                                <input type="text" class="form-control" id="editPassword" name="editPassword" placeholder="Enter password"
-                                                       value="<c:out value='${user.password}'/>">
+                                                <label for="editQuantity">Quantity</label>
+                                                <input type="number" class="form-control" id="editQuantity" name="editQuantity" placeholder="Enter quantity">
                                             </div>
                                             <div class="form-group">
-                                                <label for="editRole">Select role:</label>
-                                                <br>
-                                                <br>
-                                                <select id="editRole" name="editRole">
-                                                    <option ${user.role=="Admin"?"selected":""} value="Admin">Admin</option>
-                                                    <option ${user.role=="User"?"selected":""} value="User">User</option>
-                                                </select>
+                                                <label for="editPrice">Price</label>
+                                                <input type="text" class="form-control" id="editPrice" name="editPrice" placeholder="Enter price">
                                             </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary" name="save-user" value="saved">Save</button>
+
+                                            <div class="card-footer">
+                                                <button type="submit" class="btn btn-primary" name="save-product" value="saved">Submit</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
