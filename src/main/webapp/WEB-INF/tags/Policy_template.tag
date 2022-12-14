@@ -95,10 +95,11 @@
                         </div>
                     </div>
                 </div>
-                <a href="${pageContext.request.contextPath}/home" class="navbar-brand mx-5 d-none d-lg-block">
+                <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                     <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>LOTUS</h1>
                 </a>
                 <div class="navbar-nav mr-auto py-0">
+                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/productdetail">ProductDetail</a>
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/Service" >Service</a>
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/contact">Contact</a>
                 </div>

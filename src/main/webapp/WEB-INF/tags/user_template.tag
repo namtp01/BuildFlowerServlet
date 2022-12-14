@@ -58,40 +58,31 @@
             </div>
             <div class="col-md-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <form action="search" class="form-inline d-inline-flex align-items-center">
-                        <div class="input-group input-group-sm align-items-center">
-                            <input class="form-control form-control-navbar" name="txt" type="text" placeholder="Search" aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-navbar" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-<%--                        ml-3 px-3--%>
-<%--                        <a class="text-white px-3" href="">--%>
-<%--                            <i class="fas fa-search"></i>--%>
-<%--                        </a>--%>
-                        <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
-                            <i class="far fa-user"></i>
-                        </a>
-                        <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </form>
+                    <div class="col-md-6 text-center text-lg-right">
+                        <div class="d-inline-flex align-items-center">
 
-<%--                    <a class="text-white px-3" href="">--%>
-<%--                        <i class="fas fa-search"></i>--%>
-<%--                    </a>--%>
-<%--                    <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">--%>
-<%--                        <i class="far fa-user"></i>--%>
-<%--                    </a>--%>
-<%--                    <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">--%>
-<%--                        <i class="fas fa-shopping-cart"></i>--%>
-<%--                    </a>--%>
+                            <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
+                                <i class="far fa-user"></i>
+                            </a>
+                            <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-lg-right">
+                        <div class="d-inline-flex align-items-center">
+
+                            <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
+                                <i class="far fa-user"></i>
+                            </a>
+                            <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
 <!-- Navbar Start -->
 <div class="container-fluid position-relative nav-bar p-0">
@@ -120,7 +111,6 @@
                     <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>LOTUS</h1>
                 </a>
                 <div class="navbar-nav mr-auto py-0">
-                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/productdetail">ProductDetail</a>
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/Service" >Service</a>
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/contact">Contact</a>
                 </div>

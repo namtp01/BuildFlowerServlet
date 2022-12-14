@@ -80,11 +80,11 @@
 
                                     <!-- Password input -->
                                     <div class="form-outline mb-4">
-                                        <input name="su_repassword" type="password" id="form3Example4" class="form-control" />
+                                        <input name="su_rePassword" type="password" id="form3Example4" class="form-control" />
                                         <label class="form-label" for="form3Example4">Repassword</label>
                                     </div>
 
-                                    <!-- Checkbox -->
+0                                    <!-- Checkbox -->
                                     <div class="form-check d-flex justify-content-center mb-4">
                                         <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
                                         <label class="form-check-label" for="form2Example33">

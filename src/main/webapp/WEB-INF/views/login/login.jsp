@@ -75,7 +75,7 @@
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <h class="mb-0 me-2">Don't have an account?</h>
-                    <button type="button" class="btn btn-outline-danger">Create new</button>
+                    <button type="button" class="btn btn-outline-danger" href="WEB-INF/views/login/login.jsp">Create new</button>
                   </div>
                 </form>
 
