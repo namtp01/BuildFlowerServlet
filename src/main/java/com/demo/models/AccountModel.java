@@ -227,4 +227,21 @@ public class AccountModel {
 
         }
     }
+
+    public int countAccount() {
+        String query = "SELECT * FROM account";
+        int count = 0;
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                count++;
+            }
+        } catch (Exception e) {
+
+        }
+        return count;
+    }
 }

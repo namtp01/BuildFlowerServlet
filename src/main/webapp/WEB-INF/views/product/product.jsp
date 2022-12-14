@@ -181,8 +181,6 @@
                                              data-setbg="img/product/discount/pd-1.jpg">
                                             <div class="product__discount__percent">-20%</div>
                                             <ul class="product__item__pic__hover">
-                                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                                 <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
@@ -204,8 +202,6 @@
                                     <div class="product__item__pic set-bg" >
                                         <img src="${product.image}" alt="">
                                         <ul class="product__item__pic__hover">
-                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                                             <li><a href="${pageContext.request.contextPath}/addtocart?action=buy&id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>

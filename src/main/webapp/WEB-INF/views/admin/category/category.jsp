@@ -13,7 +13,6 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item active">Categories</li>
                     </ol>
                 </div>
@@ -26,7 +25,26 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <!-- /.card-header -->
+                    <div class="card-header">
+                        <h3 class="card-title">Information of all categories</h3>
+                        <form action="${pageContext.request.contextPath}/admin/add_category">
+                            <input type="submit" class="btn btn-primary float-right" value="Add category"/>
+                        </form>
+                    </div>
+                    <div class="row card-header">
+                        <div class="col-md-8 offset-md-2">
+                            <form method="post">
+                                <div class="input-group">
+                                    <input type="search" class="form-control form-control-lg" placeholder="Type username of category here" name="search-category-value">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-lg btn-default" name="search-category">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                     <div class="card-body">
                         <table id="example2" class="table table-bordered table-striped">
                             <thead>

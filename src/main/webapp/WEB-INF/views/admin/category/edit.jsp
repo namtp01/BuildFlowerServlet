@@ -30,8 +30,6 @@
                         <div class="card-header">
                             <h3 class="card-title">Edit Category</h3>
                         </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
                         <form method="post" action="${pageContext.request.contextPath}/admin/category?action=edit">
                             <div class="card-body">
                                 <div class="form-group">
@@ -44,7 +42,6 @@
                                     <label class="form-check-label" for="status">Status</label>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
 
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Save</button>

@@ -28,14 +28,14 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>0</h3>
+                            <h3>${countProduct}</h3>
 
-                            <p>Order</p>
+                            <p>Products</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="${pageContext.request.contextPath}/admin/product" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -43,14 +43,14 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>5<sup style="font-size: 20px">%</sup></h3>
+                            <h3>${countUser}</h3>
 
-                            <p>User</p>
+                            <p>Users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="${pageContext.request.contextPath}/admin/user" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -58,14 +58,14 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>13</h3>
+                            <h3>${countCategory}</h3>
 
-                            <p>Product</p>
+                            <p>Categories</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="${pageContext.request.contextPath}/admin/category" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -98,109 +98,87 @@
                                 <li>
                                     <!-- drag handle -->
                                     <span class="handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
+                                      <i class="fas fa-ellipsis-v"></i>
+                                      <i class="fas fa-ellipsis-v"></i>
+                                    </span>
                                     <!-- checkbox -->
                                     <div  class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo1" id="todoCheck1">
+                                        <input type="checkbox" value="" name="todo1" id="todoCheck1" checked>
                                         <label for="todoCheck1"></label>
                                     </div>
                                     <!-- todo text -->
                                     <span class="text">Design a nice theme</span>
-                                    <!-- Emphasis label -->
-                                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
-                                    <!-- General tools such as edit or delete-->
+                                    <small class="badge badge-danger"><i class="far fa-clock"></i> 4 Weeks</small>
                                     <div class="tools">
                                         <i class="fas fa-edit"></i>
                                         <i class="fas fa-trash-o"></i>
                                     </div>
                                 </li>
                                 <li>
-                    <span class="handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
+                                    <span class="handle">
+                                      <i class="fas fa-ellipsis-v"></i>
+                                      <i class="fas fa-ellipsis-v"></i>
+                                    </span>
                                     <div  class="icheck-primary d-inline ml-2">
                                         <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
                                         <label for="todoCheck2"></label>
                                     </div>
-                                    <span class="text">Make the theme responsive</span>
-                                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                                    <span class="text">Create a website</span>
+                                    <small class="badge badge-info"><i class="far fa-clock"></i> 2 Weeks</small>
                                     <div class="tools">
                                         <i class="fas fa-edit"></i>
                                         <i class="fas fa-trash-o"></i>
                                     </div>
                                 </li>
                                 <li>
-                    <span class="handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
+                                    <span class="handle">
+                                      <i class="fas fa-ellipsis-v"></i>
+                                      <i class="fas fa-ellipsis-v"></i>
+                                    </span>
                                     <div  class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                                        <input type="checkbox" value="" name="todo3" id="todoCheck3" >
                                         <label for="todoCheck3"></label>
                                     </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
+                                    <span class="text">Design a theme again</span>
+                                    <small class="badge badge-warning"><i class="far fa-clock"></i> 3 Weeks</small>
                                     <div class="tools">
                                         <i class="fas fa-edit"></i>
                                         <i class="fas fa-trash-o"></i>
                                     </div>
                                 </li>
                                 <li>
-                    <span class="handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
+                                    <span class="handle">
+                                      <i class="fas fa-ellipsis-v"></i>
+                                      <i class="fas fa-ellipsis-v"></i>
+                                    </span>
                                     <div  class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo4" id="todoCheck4">
+                                        <input type="checkbox" value="" name="todo4" id="todoCheck4" checked>
                                         <label for="todoCheck4"></label>
                                     </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
+                                    <span class="text">Create database</span>
+                                    <small class="badge badge-success"><i class="far fa-clock"></i> 3 Weeks</small>
                                     <div class="tools">
                                         <i class="fas fa-edit"></i>
                                         <i class="fas fa-trash-o"></i>
                                     </div>
                                 </li>
                                 <li>
-                    <span class="handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
+                                    <span class="handle">
+                                      <i class="fas fa-ellipsis-v"></i>
+                                      <i class="fas fa-ellipsis-v"></i>
+                                    </span>
                                     <div  class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo5" id="todoCheck5">
+                                        <input type="checkbox" value="" name="todo5" id="todoCheck5" checked>
                                         <label for="todoCheck5"></label>
                                     </div>
-                                    <span class="text">Check your messages and notifications</span>
-                                    <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
-                                    <div class="tools">
-                                        <i class="fas fa-edit"></i>
-                                        <i class="fas fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle">
-                      <i class="fas fa-ellipsis-v"></i>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </span>
-                                    <div  class="icheck-primary d-inline ml-2">
-                                        <input type="checkbox" value="" name="todo6" id="todoCheck6">
-                                        <label for="todoCheck6"></label>
-                                    </div>
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
+                                    <span class="text">Assign backend</span>
+                                    <small class="badge badge-primary"><i class="far fa-clock"></i> 2 week</small>
                                     <div class="tools">
                                         <i class="fas fa-edit"></i>
                                         <i class="fas fa-trash-o"></i>
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                        <!-- /.card-body -->
-                        <div class="card-footer clearfix">
-                            <button type="button" class="btn btn-info float-right"><i class="fas fa-plus"></i> Add item</button>
                         </div>
                     </div>
                     <!-- /.card -->

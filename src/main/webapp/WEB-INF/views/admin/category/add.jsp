@@ -30,8 +30,6 @@
                         <div class="card-header">
                             <h3 class="card-title">Add Category</h3>
                         </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
                         <form method="post" action="${pageContext.request.contextPath}/admin/category?action=add">
                             <div class="card-body">
                                 <div class="form-group">

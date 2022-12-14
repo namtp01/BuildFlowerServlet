@@ -47,9 +47,6 @@
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="${pageContext.request.contextPath}/admin/dashboard" class="nav-link">Home</a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
         </ul>
     </nav>
     <!-- /.navbar -->

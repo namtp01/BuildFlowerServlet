@@ -144,6 +144,7 @@ public class ProductModel {
         }
         return null;
     }
+
     public void deleteProduct(String id) {
         String query = "DELETE FROM product WHERE id = ?";
         try {
@@ -171,6 +172,39 @@ public class ProductModel {
             ps.setString(4, description);
             ps.setString(5, detail);
             ps.setString(6, image);
+            ps.executeUpdate();
+        } catch (Exception e) {
+
+        }
+    }
+
+    public int countProduct() {
+        String query = "SELECT * FROM Kht9OmxnNP.product";
+        int count = 0;
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                count++;
+            }
+        } catch (Exception e) {
+
+        }
+        return count;
+    }
+
+    public void updateProduct(Product product) {
+        String query = "UPDATE Kht9OmxnNP.product SET name = ?, Kht9OmxnNP.product.price = ?, Kht9OmxnNP.product.quantity = ?, Kht9OmxnNP.product.description = ?, Kht9OmxnNP.product.details = ?, Kht9OmxnNP.product.image = ?";
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, product.getName());
+            ps.setDouble(2, product.getPrice());
+            ps.setInt(3, product.getQuantity());
+            ps.setString(4, product.getDescription());
+            ps.setString(5, product.getDetails());
+            ps.setString(6, product.getImage());
             ps.executeUpdate();
         } catch (Exception e) {
 

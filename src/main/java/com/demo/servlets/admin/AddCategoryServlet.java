@@ -1,6 +1,7 @@
 package com.demo.servlets.admin;
 
 import com.demo.entity.Account;
+import com.demo.models.CategoryModel;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -31,13 +32,13 @@ public class AddCategoryServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("submit-category");
+        CategoryModel categoryModel = new CategoryModel();
 
         if (action.equals("clicked")) {
-            String name = request.getParameter("inputName");
-            String quantity = request.getParameter("inputQuantity");
-            String price = request.getParameter("inputPrice");
+            String name = request.getParameter("name");
 
-            if (!name.equals("") && !quantity.equals("") && !price.equals("")) {
+            if (!name.equals("")) {
+                categoryModel.insertCategory(name);
                 response.sendRedirect(request.getContextPath() + "/admin/product");
             }
         }
