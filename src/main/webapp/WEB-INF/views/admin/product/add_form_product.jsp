@@ -44,16 +44,30 @@
                                             <input type="number" class="form-control" id="inputQuantity" name="inputQuantity" placeholder="Enter quantity">
                                         </div>
                                         <div class="form-group">
+                                            <label for="inputPrice">Price</label>
+                                            <input type="number" class="form-control" id="inputPrice" name="inputPrice" placeholder="Enter price">
+                                        </div>
+                                        <div class="form-group">
                                             <label for="inputDescription">Description</label>
-                                            <input type="text" class="form-control" id="inputDescription" name="inputDescription" placeholder="Enter Description">
+                                            <input type="text" class="form-control" id="inputDescription" name="inputDescription" placeholder="Enter description">
                                         </div>
                                         <div class="form-group">
                                             <label for="inputDetails">Details</label>
-                                            <input type="text" class="form-control" id="inputDetails" name="inputDetails" placeholder="Enter Details">
+                                            <input type="text" class="form-control" id="inputDetails" name="inputDetails" placeholder="Enter details">
                                         </div>
                                         <div class="form-group">
                                             <label for="inputImage">Image</label>
                                             <input type="text" class="form-control" id="inputImage" name="inputImage" placeholder="Enter link image">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputType">Catergory</label>
+                                            <br>
+                                            <select id="inputType" name="inputType">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="card-footer">

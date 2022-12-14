@@ -1,6 +1,7 @@
 package com.demo.servlets.admin;
 
 import com.demo.entity.Account;
+import com.demo.models.ProductModel;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -31,13 +32,19 @@ public class AddProductServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("submit-product");
+        ProductModel productModel = new ProductModel();
 
         if (action.equals("clicked")) {
             String name = request.getParameter("inputName");
             String quantity = request.getParameter("inputQuantity");
             String price = request.getParameter("inputPrice");
+            String description = request.getParameter("inputDescription");
+            String details = request.getParameter("inputDetails");
+            String image = request.getParameter("inputImage");
+            String type = request.getParameter("inputType");
 
             if (!name.equals("") && !quantity.equals("") && !price.equals("")) {
+                productModel.insertProduct(name, quantity, price, description, details, image);
                 response.sendRedirect(request.getContextPath() + "/admin/product");
             }
         }

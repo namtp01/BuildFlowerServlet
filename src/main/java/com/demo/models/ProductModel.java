@@ -158,4 +158,22 @@ public class ProductModel {
 
         }
     }
+
+    public void insertProduct(String name, String quantity, String price, String description, String detail, String image) {
+        String query = "INSERT INTO Kht9OmxnNP.product(Kht9OmxnNP.product.name, Kht9OmxnNP.product.price, Kht9OmxnNP.product.quantity, Kht9OmxnNP.product.description, Kht9OmxnNP.product.details, Kht9OmxnNP.product.image, Kht9OmxnNP.product.status, Kht9OmxnNP.product.category_id) " +
+                "values(?,?,?,?,?,?,?)";
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, name);
+            ps.setString(2, quantity);
+            ps.setString(3, price);
+            ps.setString(4, description);
+            ps.setString(5, detail);
+            ps.setString(6, image);
+            ps.executeUpdate();
+        } catch (Exception e) {
+
+        }
+    }
 }

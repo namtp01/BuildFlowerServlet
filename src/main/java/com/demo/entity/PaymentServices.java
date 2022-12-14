@@ -7,7 +7,7 @@ import com.paypal.api.payments.Item;
 import com.paypal.base.rest.*;
 
 public class PaymentServices {
-    private static final String CLIENT_ID = "AbvuCKVkf-SWYRk2j4Sq7HLmeNNyB9d1d_XOIlCA8qYO0IugDoNwBentHtWBOG5BfgeExzJ2WgUlHHRy\n";
+    private static final String CLIENT_ID = "AbvuCKVkf-SWYRk2j4Sq7HLmeNNyB9d1d_XOIlCA8qYO0IugDoNwBentHtWBOG5BfgeExzJ2WgUlHHRy";
     private static final String CLIENT_SECRET = "EI_fWFT1B4MMujTF95mfaZbI-OSZKOiZNQAhVvcaKiJRULU-cbfXFBZyz9AB-evvNyyTA8HcWXcDwh56";
     private static final String MODE = "sandbox";
 
@@ -58,7 +58,6 @@ public class PaymentServices {
         Details details = new Details();
         details.setShipping(orderDetail.getShipping());
         details.setSubtotal(orderDetail.getSubtotal());
-        details.setTax(orderDetail.getTax());
 
         Amount amount = new Amount();
         amount.setCurrency("USD");
@@ -76,7 +75,6 @@ public class PaymentServices {
         item.setCurrency("USD");
         item.setName(orderDetail.getProductName());
         item.setPrice(orderDetail.getSubtotal());
-        item.setTax(orderDetail.getTax());
         item.setQuantity("1");
 
         items.add(item);

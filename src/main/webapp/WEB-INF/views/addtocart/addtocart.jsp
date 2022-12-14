@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </c:forEach>
-            <div class="back-to-shop"><a  href="${pageContext.request.contextPath}/home">&leftarrow;<span class="text-muted">Back to shop</span></a></div>
+            <div class="back-to-shop"><a  href="${pageContext.request.contextPath}/product">&leftarrow;<span class="text-muted">Back to shop</span></a></div>
         </div>
         <div class="col-md-4 summary">
             <div><h5><b>Summary</b></h5></div>
@@ -62,7 +62,7 @@
                 <div class="col">TOTAL PRICE</div>
                 <div class="col text-right">&euro; $${total + 5.000 }</div>
             </div>
-            <a method="post" class="btn" href="${pageContext.request.contextPath}/authorize_payment">CHECKOUT</a>
+            <a method="post" class="btn" href="${pageContext.request.contextPath}/authorize_payment?product=<c:out value="Order"/>&total=<c:out value="${total}"/>&shipping=<c:out value="${5.000}"/>">CHECKOUT</a>
         </div>
     </div>
 

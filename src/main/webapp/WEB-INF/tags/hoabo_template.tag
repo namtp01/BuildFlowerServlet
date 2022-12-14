@@ -51,10 +51,6 @@
             </div>
             <div class="col-md-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-
-                    <a class="text-white px-3" href="">
-                        <i class="fas fa-search"></i>
-                    </a>
                     <a class="text-white px-3" href="">
                         <i class="far fa-user"></i>
                     </a>
@@ -90,7 +86,6 @@
                     <h1 class="m-0 display-4 text-primary"><span class="text-secondary">i</span>FLOWERS</h1>
                 </a>
                 <div class="navbar-nav mr-auto py-0">
-                    <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/productdetail">ProductDetail</a>
                     <a href="gallery.html" class="nav-item nav-link">Gallery</a>
                     <a  class="nav-item nav-link" href="${pageContext.request.contextPath}/contact">Contact</a>
                 </div>

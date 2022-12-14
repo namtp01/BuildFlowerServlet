@@ -19,12 +19,14 @@ public class AuthorizePaymentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String product = request.getParameter("product");
-        String subtotal = request.getParameter("subtotal");
+        String subtotal = request.getParameter("total");
         String shipping = request.getParameter("shipping");
-        String tax = request.getParameter("tax");
-        String total = request.getParameter("total");
+        Float total = Float.parseFloat(subtotal) + Float.parseFloat(shipping);
+        String totals = Float.toString(total);
+        HttpSession session = request.getSession();
+        session.invalidate();
 
-        OrderDetail orderDetail = new OrderDetail(product, subtotal, shipping, tax, total);
+        OrderDetail orderDetail = new OrderDetail(product, subtotal, shipping, totals);
 
         try {
             PaymentServices paymentServices = new PaymentServices();

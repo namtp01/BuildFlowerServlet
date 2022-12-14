@@ -43,6 +43,7 @@
       <td><b>Total:</b></td>
       <td>${transaction.amount.total} USD</td>
     </tr>
+
   </table>
 </div>
 </body>
