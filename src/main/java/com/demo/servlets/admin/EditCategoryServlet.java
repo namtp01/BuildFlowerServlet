@@ -20,8 +20,6 @@ public class EditCategoryServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        ServletContext sc = getServletContext();
-        String url = "/WEB-INF/views/admin/category/edit.jsp";
         CategoryModel categoryModel = new CategoryModel();
 
         HttpSession session = request.getSession();
@@ -40,7 +38,7 @@ public class EditCategoryServlet extends HttpServlet{
 
         request.setAttribute("category", category);
 
-        sc.getRequestDispatcher(url).forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/admin/category/edit.jsp").forward(request, response);
     }
 
     @Override

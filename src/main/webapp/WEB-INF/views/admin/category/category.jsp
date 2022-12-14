@@ -63,7 +63,7 @@
                                     <td>${category.status ? "Show" : "Hide" }</td>
                                     <td>
                                         <form>
-                                            <a method="post" class="btn btn-success" href="${pageContext.request.contextPath}/admin/edit_catergory?id=<c:out value='${category.id}'/>" id="edit-category">Edit</a>
+                                            <a method="post" class="btn btn-success" href="${pageContext.request.contextPath}/admin/edit_category?id=<c:out value='${category.id}'/>" id="edit-category">Edit</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                             <a class="btn btn-danger" href="${pageContext.request.contextPath}/admin/category?id=<c:out value='${category.id}'/>" id="delete-user" name="delete-category">Delete</a>
                                         </form>

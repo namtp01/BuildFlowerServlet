@@ -30,7 +30,7 @@ public class AdminUserServlet extends HttpServlet {
             message = "Hello " + current_account.getFull_name();
         }
         catch(Exception e){
-            url = "/WEB-INF/views/admin/login/login.jsp";
+            request.getRequestDispatcher("/WEB-INF/views/admin/login/login.jsp");
         }
         request.setAttribute("message", message);
 
