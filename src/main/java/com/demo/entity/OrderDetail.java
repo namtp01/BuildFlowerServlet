@@ -26,7 +26,6 @@ public class OrderDetail {
         return String.format("%.2f", shipping);
     }
 
-
     public String getTotal() {
         return String.format("%.2f", total);
     }

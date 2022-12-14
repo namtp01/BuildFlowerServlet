@@ -69,17 +69,6 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6 text-center text-lg-right">
-                        <div class="d-inline-flex align-items-center">
-
-                            <a class="text-white px-3"  href="${pageContext.request.contextPath}/profile">
-                                <i class="far fa-user"></i>
-                            </a>
-                            <a class="text-white px-3" href="${pageContext.request.contextPath}/addtocart">
-                                <i class="fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

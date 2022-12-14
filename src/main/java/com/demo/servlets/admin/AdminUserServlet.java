@@ -30,7 +30,7 @@ public class AdminUserServlet extends HttpServlet {
             message = "Hello " + current_account.getFull_name();
         }
         catch(Exception e){
-            request.getRequestDispatcher("/WEB-INF/views/admin/login/login.jsp");
+            sc.getRequestDispatcher("/WEB-INF/views/product/admin_product.jsp").forward(request,response);
         }
         request.setAttribute("message", message);
 

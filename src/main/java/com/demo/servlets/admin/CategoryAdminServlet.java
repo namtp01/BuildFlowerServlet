@@ -30,7 +30,7 @@ public class CategoryAdminServlet extends HttpServlet {
             message = "Hello " + current_account.getFull_name();
         }
         catch(Exception e){
-            sc.getRequestDispatcher("/WEB-INF/views/product/admin_product.jsp").forward(request,response);
+            sc.getRequestDispatcher("/WEB-INF/views/login/login.jsp").forward(request,response);
         }
         request.setAttribute("message", message);
 

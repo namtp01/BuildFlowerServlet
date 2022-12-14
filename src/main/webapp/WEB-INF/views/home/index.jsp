@@ -18,7 +18,7 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="col-lg-6 col-md-8">
+                            <div class="col-lg-7 col-md-8">
                                 <div class="detail_box">
                                     <h2>
                                         Welcome
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-lg-6 col-md-8">
+                            <div class="col-lg-7 col-md-8">
                                 <div class="detail_box">
                                     <h2>
                                         Welcome
