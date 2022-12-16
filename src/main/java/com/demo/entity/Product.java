@@ -12,9 +12,17 @@ public class Product {
 
     private Boolean status;
 
-    public Product(){}
+    private int categoryId;
 
-    public Product(int id, String name, Double price, int quantity, String description, String details, String image ,Boolean status) {
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public Product(int id, String name, Double price, int quantity, String description, String details, String image, Boolean status, int categoryId) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -23,7 +31,11 @@ public class Product {
         this.details = details;
         this.image = image;
         this.status = status;
+        this.categoryId = categoryId;
     }
+
+    public Product(){}
+
 
     public int getId() {
         return id;
@@ -98,7 +110,9 @@ public class Product {
                 ", quantity=" + quantity +
                 ", description='" + description + '\'' +
                 ", details='" + details + '\'' +
+                ", image='" + image + '\'' +
                 ", status=" + status +
+                ", categoryId=" + categoryId +
                 '}';
     }
 }

@@ -65,7 +65,7 @@
                     <label class="form-label" for="form2Example22">Password</label>
                   </div>
 
-                  <p class="text-danger">${mess }</p>
+<%--                  <p class="text-danger">${mess }</p>--%>
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log

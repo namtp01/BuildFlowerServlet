@@ -3,6 +3,7 @@ package com.demo.entity;
 public class Category {
     private int id;
     private String name;
+
     private Boolean status;
 
     public Category() {}

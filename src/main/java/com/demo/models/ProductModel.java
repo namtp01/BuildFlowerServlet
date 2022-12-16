@@ -31,7 +31,8 @@ public class ProductModel {
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getBoolean(8)));
+                        rs.getBoolean(8),
+                        rs.getInt(9)));
             }
         } catch (Exception e) {
 
@@ -56,7 +57,8 @@ public class ProductModel {
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getBoolean(8)));
+                        rs.getBoolean(8),
+                        rs.getInt(9)));
             }
         } catch (Exception e) {
 
@@ -79,7 +81,8 @@ public class ProductModel {
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getBoolean(8)));
+                        rs.getBoolean(8),
+                        rs.getInt(9)));
             }
         } catch (Exception e) {
 
@@ -102,7 +105,8 @@ public class ProductModel {
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getBoolean(8)));
+                        rs.getBoolean(8),
+                        rs.getInt(9)));
             }
         } catch (Exception e) {
 
@@ -126,7 +130,7 @@ public class ProductModel {
                         rs.getString(5),
                         rs.getString(6),
                         rs.getString(7),
-                        rs.getBoolean(8)));
+                        rs.getBoolean(8),rs.getInt(9)));
             }
         } catch (Exception e) {
 
@@ -142,6 +146,37 @@ public class ProductModel {
         }
 
         return -1;
+    }
+
+    public void deleteProduct(String id) {
+        String query = "delete from product where id = ?";
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+
+        }
+    }
+
+    public void insertProduct(String name, String price, String quanity, String description, String details, String image, String status, String category_id) {
+        String query = "insert into product(name, price, quantity, description, details, image, status, category_id) values (?,?,?,?,?,?,?,?)";
+        try {
+            conn = new DBConnection().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, name);
+            ps.setString(2, price);
+            ps.setString(3, quanity);
+            ps.setString(4, description);
+            ps.setString(5, details);
+            ps.setString(6, image);
+            ps.setString(7, status);
+            ps.setString(8, category_id);
+            ps.executeUpdate();
+        } catch (Exception e) {
+
+        }
     }
 //    public static void main(String[] args) {
 //        ProductModel dao = new ProductModel();

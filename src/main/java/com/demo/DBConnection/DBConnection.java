@@ -15,11 +15,11 @@ public class DBConnection {
     }
 
     private final String serverName = "remotemysql.com";
-    private final String dbName = "Kht9OmxnNP";
+    private final String dbName = "PtCZmN1UX7";
     private final String portNumber = "3306";
     private final String instance = "";
-    private final String userID = "Kht9OmxnNP";
-    private final String password = "UEHp8Dvnw9";
+    private final String userID = "PtCZmN1UX7";
+    private final String password = "oNzJbCoK5Q";
 
 //    public static void main(String[] args) {
 //        try {

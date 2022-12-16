@@ -53,7 +53,11 @@
                                         <img class="product__item__pic" src="${product.image}">
                                     </td>
                                     <td>${product.status ? "Show" : "Hide" }</td>
-                                    <th>Edit | Delete</th>
+                                    <td>
+                                        <a href="${pageContext.request.contextPath}/admin/product?action=edit&id=${product.id }">Edit</a>
+                                        |
+                                        <a href="${pageContext.request.contextPath}/admin/product?action=delete&id=${product.id }" onclick="return confirm('Do you want to delete ?')">Delete</a>
+                                    </td>
                                 </tr>
                             </c:forEach>
                             </tbody>

@@ -61,11 +61,11 @@
                     <form action="search" class="form-inline d-inline-flex align-items-center">
                         <div class="input-group input-group-sm align-items-center">
                             <input class="form-control form-control-navbar" name="txt" type="text" placeholder="Search" aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-navbar" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
+<%--                            <div class="input-group-append">--%>
+<%--                                <button class="btn btn-navbar" type="submit">--%>
+<%--                                    <i class="fas fa-search"></i>--%>
+<%--                                </button>--%>
+<%--                            </div>--%>
                         </div>
 <%--                        ml-3 px-3--%>
 <%--                        <a class="text-white px-3" href="">--%>
