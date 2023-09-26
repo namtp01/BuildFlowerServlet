@@ -1,5 +1,5 @@
 $btnColor: #023b48;
-$white: #ffffff;
+$white: #d22000;
 $primary1: #18d3ff;
 $primary2: #0dc3ff;
 $black:#050505;
@@ -59,7 +59,7 @@ body {
 }
 
 .layout_padding {
-  padding: 75px 0;
+  padding: 50px 0;
 }
 
 .layout_padding2 {
@@ -88,6 +88,9 @@ body {
   h2 {
     position: relative;
     font-weight: bold;
+    color: #dd2222;
+    font-size: 36px;
+    font-weight: 600;
 
     &::before {
       content: url(../images/tulip.png);
@@ -99,13 +102,15 @@ body {
   }
 }
 
+
+
 /*header section*/
 .hero_area {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  background-image: url(../images/hero.png);
+  background-image: url(../images/home3.png);
   background-size: cover;
   background-position: top right;
 }
@@ -137,6 +142,8 @@ body {
   padding: 10px 30px;
   color: #434242;
   text-align: center;
+  font-size: 23px;
+
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item.active .nav-link {
@@ -212,6 +219,7 @@ a:focus {
 .quote_btn-container {
   display: flex;
   align-items: center;
+  font-size:23px;
 
   a {
     color: $black;
@@ -648,17 +656,20 @@ a:focus {
 
 // info section
 .info_section {
-  background-color: #252525;
+  background-color: #5b0606;
   color: $white;
+
 
   h5 {
     margin-bottom: 20px;
     font-weight: 700;
+    font-size: 28px;
+    font-family: 'Baloo Chettan', cursive;
   }
 
   .info_logo {
     h5 {
-      font-size: 38px;
+      font-size: 28px;
       @include secondary-font();
     }
   }
@@ -753,7 +764,7 @@ a:focus {
 /* footer section*/
 
 .footer_section {
-  background-color: #252525;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   position: relative;
@@ -773,6 +784,7 @@ a:focus {
 .footer_section p {
   border-top: 1px solid $white;
   color: $white;
+  font-size:17px;
   margin: 0;
   text-align: center;
   padding: 20px 35px;
@@ -784,7 +796,189 @@ a:focus {
   a {
     color: $white;
   }
+}
+.hero_area1 {
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #ffeded;
+  background-size: cover;
+  background-position: top right;
 
 }
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-// end footer section
+.card{
+  margin: auto;
+  max-width: 950px;
+  width: 90%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  border: transparent;
+}
+@media(max-width:767px){
+  .card{
+    margin: 3vh auto;
+  }
+}
+.cart{
+  background-color: #fff;
+  padding: 4vh 5vh;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+@media(max-width:767px){
+  .cart{
+    padding: 4vh;
+    border-bottom-left-radius: unset;
+    border-top-right-radius: 1rem;
+  }
+}
+.summary{
+  background-color: #ddd;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 4vh;
+  color: rgb(65, 65, 65);
+}
+@media(max-width:767px){
+  .summary{
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 1rem;
+  }
+}
+.summary .col-2{
+  padding: 0;
+}
+.summary .col-10
+{
+  padding: 0;
+}.row{
+   margin: 0;
+ }
+.title b{
+  font-size: 1.5rem;
+}
+.main{
+  margin: 0;
+  padding: 2vh 0;
+  width: 100%;
+}
+.col-2, .col{
+  padding: 0 1vh;
+}
+b{
+  padding: 0 1vh;
+  font-size: 21px;
+}
+.close{
+  margin-left: auto;
+  font-size: 0.7rem;
+}
+
+.back-to-shop{
+  margin-top: 4.5rem;
+}
+
+.btn:hover{
+  color: white;
+}
+b{
+  color: black;
+}
+b:hover {
+  color: #a91d03;
+  text-decoration: none;
+}
+select{
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 1.5vh 1vh;
+  margin-bottom: 4vh;
+  outline: none;
+  width: 100%;
+  background-color: rgb(247, 247, 247);
+}
+input{
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 1vh;
+  margin-bottom: 4vh;
+  outline: none;
+  width: 100%;
+  background-color: rgb(247, 247, 247);
+}
+input:focus::-webkit-input-placeholder
+{
+  color:transparent;
+}
+.btn{
+  background-color: #000;
+  border-color: #000;
+  color: white;
+  width: 100%;
+  font-size: 0.7rem;
+  margin-top: 4vh;
+  padding: 1vh;
+  border-radius: 0;
+}
+.btn:focus{
+  box-shadow: none;
+  outline: none;
+  box-shadow: none;
+  color: white;
+  -webkit-box-shadow: none;
+  -webkit-user-select: none;
+  transition: none;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f2a8ab;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
